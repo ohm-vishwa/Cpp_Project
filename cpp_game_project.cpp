@@ -316,7 +316,7 @@ using namespace std;
     string bye = "Bye ";
     printstring(bye);
     cout<<(char)3;
-    string takecare = " tacke care, Dont`t Click on illegal links.......";
+    string takecare = " tacke care, Dont`t Click on illegal links.";
     printstring(takecare);
     Sleep(10000);
 
