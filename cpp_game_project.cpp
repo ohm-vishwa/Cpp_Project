@@ -12,7 +12,7 @@ using namespace std;
     string ask;
 
     int score = 0;
-    int input = 0;
+    int input = 10;
     int i = 0;
 
     void intro();                
