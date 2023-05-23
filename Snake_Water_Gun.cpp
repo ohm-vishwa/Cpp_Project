@@ -12,7 +12,7 @@ using namespace std;
     string user;
 
     int score = 0;
-    int input = 10;
+    int counter = 10;
     int i = 0;
 
     void intro();                
@@ -27,9 +27,9 @@ using namespace std;
      
     SetConsoleTextAttribute(h,11);
 
-    while (input > 0){
+    while (counter > 0){
         SetConsoleTextAttribute(h,8);
-        cout<<"You have remaining --> "<<input;
+        cout<<"You have remaining --> "<<counter;
         cout<<" times";
         int check = rungame();
 
@@ -39,13 +39,13 @@ using namespace std;
         Sleep(1);
         }
 
-        input--;
+        counter--;
 
         SetConsoleTextAttribute(h,11);
         if(check == 9){
-            input++;
+            counter++;
         }
-        else if(input == 0){
+        else if(counter == 0){
             cout<<"\nyour score is : "<<score<<" out of 10"<<endl;
             score = 0;
         SetConsoleTextAttribute(h,5);
@@ -68,19 +68,26 @@ using namespace std;
         cin>>ask;
         
         if(ask[0] == 'y'){
-            input = 10;
+            counter = 10;
         }
         }
 
-        SetConsoleTextAttribute(h,11);
+        SetConsoleTextAttribute(h,10);
         cout<<endl;
     }   
         string thanks = "Thanks ";
-        string forplaying = " for playing.";
+        string forplaying = " for playing... ";
+        printstring("@ohm_prakash/> ");
+        SetConsoleTextAttribute(h,7);
         printstring(thanks);
-        cout<<(char)3;
+        SetConsoleTextAttribute(h,12);
+        cout<<(char)3<<" ";
+        SetConsoleTextAttribute(h,10);
+        printstring(userName);
+        SetConsoleTextAttribute(h,7);
         printstring(forplaying);
-        Sleep(2000);
+
+        Sleep(5000);
         return 0;
     }
 
@@ -144,7 +151,7 @@ using namespace std;
     printstringfast(firstline);
     Sleep(1500);
     cout<<endl<<endl;
-    SetConsoleTextAttribute(h,6);
+    SetConsoleTextAttribute(h,14);
 
     string user = "Enter your nick name ---> ";
     string pc = "Give name to your PC ---> "; 
@@ -174,7 +181,7 @@ using namespace std;
         printstring(greet2);
      }
 
-    SetConsoleTextAttribute(h,6);
+    SetConsoleTextAttribute(h,14);
     printstringfast(userName);
     cout<<","<<endl<<endl;
 
@@ -184,7 +191,7 @@ using namespace std;
     SetConsoleTextAttribute(h,10);
 
     printstring(ComputerName);
-    SetConsoleTextAttribute(h,6);
+    SetConsoleTextAttribute(h,14);
     cout<<endl<<endl;
     Sleep(500);
 
@@ -196,13 +203,13 @@ using namespace std;
 
     string rule = "<------- RULE OF THE GAME ------->";
     string rule1 = "\'SNAKE\' + \'WATER\' ---> SNAKE win ";
-    string rule2 = "\'SNAKE\' +  \'GUN\'  ---> GUN win ";
     string rule3 = "\'WATER\' + \'SNAKE\' ---> SNAKE win ";
     string rule4 = "\'WATER\' +  \'GUN\'  ---> WATER win ";
+    string rule2 = "\'SNAKE\' +  \'GUN\'  ---> GUN win ";
     string rule5 = " \'GUN\'  + \'SNAKE\' ---> GUN win ";
     string rule6 = " \'GUN\'  + \'WATER\' ---> WATER win ";
     
-    SetConsoleTextAttribute(h,6);
+    SetConsoleTextAttribute(h,14);
     printstringfast(rule);
     cout<<endl<<endl;
     Sleep(200);
@@ -240,15 +247,15 @@ using namespace std;
     cout<<"\nPress:" ;
     SetConsoleTextAttribute(h,11);
     cout<<" [1]-> ";
-    SetConsoleTextAttribute(h,6);
+    SetConsoleTextAttribute(h,14);
     cout<<"SANKE";
     SetConsoleTextAttribute(h,11);
     cout<<" [2]-> ";
-    SetConsoleTextAttribute(h,6);
+    SetConsoleTextAttribute(h,14);
     cout<<"WATER";
     SetConsoleTextAttribute(h,11);
     cout<<" [3]-> ";
-    SetConsoleTextAttribute(h,6);
+    SetConsoleTextAttribute(h,14);
     cout<<"GUN";
     SetConsoleTextAttribute(h,11);
     cout<<" ===> ";
@@ -409,7 +416,7 @@ using namespace std;
         cout<<" Match Drawn "; 
         SetConsoleTextAttribute(h,11); 
         cout<<endl<<endl;   // match drawn
-        input++;
+        counter++;
         return 2;
     }
     else if(computer[0] == '2' && user[0] == '2'){
@@ -431,7 +438,7 @@ using namespace std;
          cout<<" Match Drawn "; 
          SetConsoleTextAttribute(h,11); 
          cout<<endl<<endl;   // match drawn
-        input++;
+        counter++;
         return 2;
     }
     else if(computer[0] == '3' && user[0] == '3'){
@@ -453,12 +460,12 @@ using namespace std;
          cout<<" Match Drawn "; 
          SetConsoleTextAttribute(h,11); 
          cout<<endl<<endl;   // match drawn
-        input++;
+        counter++;
         return 2;
     }
     else{
         SetConsoleTextAttribute(h,4);
-        cout<<"Invalid Input\n\n";
+        cout<<"Invalid counter\n\n";
         SetConsoleTextAttribute(h,11);
         return 9;
     }
