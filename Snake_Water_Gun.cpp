@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 #include <ctime>
 #include <windows.h>
 using namespace std;
@@ -23,6 +24,10 @@ using namespace std;
 
     int main(){
     interFace();
+       
+    system("cls");
+    Sleep(1000); 
+        
     intro();
      
     SetConsoleTextAttribute(h,11);
