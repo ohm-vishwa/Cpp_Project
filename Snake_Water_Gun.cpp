@@ -214,9 +214,6 @@ using namespace std;
     }
 
     int rungame(){
-    srand(time(0));
-    computer = (rand()/counter)%3 + 49;
-
     SetConsoleTextAttribute(h,9);
     cout<<"\nPress:" ;
     SetConsoleTextAttribute(h,11);
@@ -235,7 +232,10 @@ using namespace std;
     cout<<" ===> ";
     cin>>user;
     cout<<endl;
-
+        
+    srand(time(0));
+    computer = (rand()/counter)%3 + 49;
+        
     SetConsoleTextAttribute(h,11); 
     if(user[0] != '1' || user[0] != '2' ||user[0] != '3'){
         if(computer[0] == '1' && user[0] == '2'){
