@@ -62,8 +62,7 @@ using namespace std;
 
         SetConsoleTextAttribute(h,9);
         cout<<"\n\nAre you want to play again?"<<endl;
-        string agree7 = "Enter 'y' for yes, or 'n' for no/exit.";
-        printstring(agree7);
+        printstring("Enter 'y' for yes, or 'n' for no/exit.");
         cout<<endl;
 
         SetConsoleTextAttribute(h,9);
@@ -79,18 +78,17 @@ using namespace std;
 
         SetConsoleTextAttribute(h,10);
         cout<<endl;
-    }   
-        string thanks = "Thanks ";
-        string forplaying = " for playing... ";
+    } 
+
         printstring("@ohm_prakash/> ");
         SetConsoleTextAttribute(h,7);
-        printstring(thanks);
+        printstring("Thanks ");
         SetConsoleTextAttribute(h,12);
         cout<<(char)3<<" ";
         SetConsoleTextAttribute(h,10);
         printstring(userName);
         SetConsoleTextAttribute(h,7);
-        printstring(forplaying);
+        printstring(" for playing... ");
 
         Sleep(5000);
         return 0;
@@ -152,17 +150,14 @@ using namespace std;
 
     void interFace(){
     SetConsoleTextAttribute(h,4);
-    string firstline = "maximize Terminal for better experience.";
-    printstringfast(firstline);
+    printstringfast("maximize Terminal for better experience.");
     Sleep(1500);
     cout<<endl<<endl;
     SetConsoleTextAttribute(h,14);
 
-    string user = "Enter your nick name ---> ";
-    string pc = "Give name to your PC ---> "; 
-    printstringfast(user);
+    printstringfast("Enter your nick name ---> ");
     getline(cin,userName);
-    printstringfast(pc);
+    printstringfast("Give name to your PC ---> ");
     getline(cin,ComputerName); 
     cout<<endl;
 
@@ -174,25 +169,21 @@ using namespace std;
     SetConsoleTextAttribute(h,10);
 
      if(T <= 11){
-        string greet = "Good Morning ";
-        printstring(greet);
+        printstring("Good Morning ");
      }
      else if(T >= 12 && T <= 14){
-        string greet1 = "Good Afternoon ";
-        printstring(greet1);
+        printstring("Good Afternoon ");
      }
      else if(T >= 15){
-        string greet2 = "Good Evening ";
-        printstring(greet2);
+        printstring("Good Evening ");
      }
 
     SetConsoleTextAttribute(h,14);
     printstringfast(userName);
-    cout<<","<<endl<<endl;
+    cout<<",\n\n";
 
     Sleep(500);
-    string opponent = "your opponent is your PC -> ";
-    printstring(opponent);
+    printstring("your opponent is your PC -> ");
     SetConsoleTextAttribute(h,10);
 
     printstring(ComputerName);
@@ -200,47 +191,26 @@ using namespace std;
     cout<<endl<<endl;
     Sleep(500);
 
-    SetConsoleTextAttribute(h,4);
-    string aboutGame = "Before starting, I would like to show.";
-    printstring(aboutGame);
-    cout<<endl<<endl;
-    Sleep(400);
-
-    string rule = "<------- RULE OF THE GAME ------->";
-    string rule1 = "\'SNAKE\' + \'WATER\' ---> SNAKE win ";
-    string rule3 = "\'WATER\' + \'SNAKE\' ---> SNAKE win ";
-    string rule4 = "\'WATER\' +  \'GUN\'  ---> WATER win ";
-    string rule2 = "\'SNAKE\' +  \'GUN\'  ---> GUN win ";
-    string rule5 = " \'GUN\'  + \'SNAKE\' ---> GUN win ";
-    string rule6 = " \'GUN\'  + \'WATER\' ---> WATER win ";
-    
     SetConsoleTextAttribute(h,14);
-    printstringfast(rule);
-    cout<<endl<<endl;
+    printstringfast("<------- RULE OF THE GAME ------->\n\n");
     Sleep(200);
 
-    printstringfast(rule1);
+    printstringfast("\'SNAKE\' + \'WATER\' ---> SNAKE win \n");
     Sleep(200);
-    cout<<endl;
 
-    printstringfast(rule2);
+    printstringfast("\'SNAKE\' +  \'GUN\'  ---> GUN win \n");
     Sleep(200);
-    cout<<endl;
 
-    printstringfast(rule3);
+    printstringfast("\'WATER\' + \'SNAKE\' ---> SNAKE win \n");
     Sleep(200);
-    cout<<endl;
 
-    printstringfast(rule4);
+    printstringfast("\'WATER\' +  \'GUN\'  ---> WATER win \n");
     Sleep(200);
-    cout<<endl;
 
-    printstringfast(rule5);
+    printstringfast(" \'GUN\'  + \'SNAKE\' ---> GUN win \n");
     Sleep(200);
-    cout<<endl;
 
-    printstringfast(rule6);
-    cout<<endl<<endl;
+    printstringfast(" \'GUN\'  + \'WATER\' ---> WATER win \n\n");
     system("pause");
     }
 
@@ -470,7 +440,7 @@ using namespace std;
     }
     else{
         SetConsoleTextAttribute(h,4);
-        cout<<"Invalid counter\n\n";
+        cout<<"Invalid input\n\n";
         SetConsoleTextAttribute(h,11);
         return 9;
     }
