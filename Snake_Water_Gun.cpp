@@ -216,7 +216,7 @@ using namespace std;
 
     int rungame(){
     srand(time(0));
-    computer = rand()%3 + 49;
+    computer = (rand()/counter)%3 + 49;
 
     SetConsoleTextAttribute(h,9);
     cout<<"\nPress:" ;
