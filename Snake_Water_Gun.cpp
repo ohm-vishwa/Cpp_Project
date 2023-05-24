@@ -65,7 +65,6 @@ using namespace std;
         printstring("Enter 'y' for yes, or 'n' for no/exit.");
         cout<<endl;
 
-        SetConsoleTextAttribute(h,9);
         cout<<"---> "; 
 
         SetConsoleTextAttribute(h,6);
@@ -80,7 +79,7 @@ using namespace std;
         cout<<endl;
     } 
 
-        printstring("@ohm_prakash/> ");
+        printstring("@ohm_vishwa/> ");
         SetConsoleTextAttribute(h,7);
         printstring("Thanks ");
         SetConsoleTextAttribute(h,12);
