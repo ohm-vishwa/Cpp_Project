@@ -455,6 +455,6 @@ using namespace std;
     void printstringfast(string printinloop){
         for(int i = 0 ; printinloop[i] != '\0' ; i++){
             cout<<printinloop[i];
-            Sleep(5);
+            Sleep(15);
         }
     }
