@@ -41,7 +41,7 @@ using namespace std;
         SetConsoleTextAttribute(h,5);
         for(int i = 0 ; i <= 65 ; i++){
         cout<<"-";
-        Sleep(1);
+        Sleep(15);
         }
 
         counter--;
