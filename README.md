@@ -1,6 +1,6 @@
-I'm Om, student of CSE Branch in DAV IET Daltongaj, Palamu, Jharkhand.
+Hello! I'm Om a student of CSE Branch in DAV IET Daltongaj, Palamu, Jharkhand.
 
-This very old Game Snake, Water, Gun similar to Rock, Paper, Sicssor.
+This is very old Game Snake, Water, Gun similar to Rock, Paper, Sicssor.
 
 I just try to make intractive,
 In this program, I use most of the function of <windows.h> file to produce text color.
