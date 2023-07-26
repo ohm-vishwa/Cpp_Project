@@ -61,10 +61,8 @@ using namespace std;
         }
 
         SetConsoleTextAttribute(h,9);
-        cout<<"\n\nAre you want to play again?"<<endl;
-        printstring("Enter 'y' for yes, or 'n' for no/exit.");
-        cout<<endl;
-
+        printstring("\n\nAre you want to play again ?\n");
+        printstring("Enter 'y' for yes, or 'n' for no/exit.\n");
         cout<<"---> "; 
 
         SetConsoleTextAttribute(h,6);
