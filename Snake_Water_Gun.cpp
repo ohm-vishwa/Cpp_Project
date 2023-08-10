@@ -14,7 +14,6 @@ using namespace std;
 
     int score = 0;
     int counter = 10;
-    int i = 0;
 
     void intro();                
     void interFace();
