@@ -21,7 +21,7 @@ using namespace std;
     void printstring(string printinloop);
     void printstringfast(string printinloop);
 
-    void main(){
+    int main(){
     interFace();
        
     system("cls");
