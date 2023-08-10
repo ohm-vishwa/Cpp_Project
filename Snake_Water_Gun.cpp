@@ -1,7 +1,8 @@
 #include <iostream>
+#include <windows.h>
 #include <stdlib.h>
 #include <ctime>
-#include <windows.h>
+#include <string>
 using namespace std;
 
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -24,8 +25,10 @@ using namespace std;
     int main(){
     interFace();
        
+    system("Color A");
+    Sleep(300);
+
     system("cls");
-    Sleep(1000); 
         
     intro();
      
@@ -86,6 +89,10 @@ using namespace std;
         printstring(" for playing... ");
 
         Sleep(5000);
+        system("cls");
+        system("Color A");
+        
+        return 0;
     }
 
     // <---------------------------------------------------------------------------------------------->
@@ -150,22 +157,22 @@ void interFace(){
 
     SetConsoleTextAttribute(h,14);
     printstringfast("<------- RULE OF THE GAME ------->\n\n");
-    Sleep(200);
+    Sleep(30);
 
     printstringfast("\'SNAKE\' + \'WATER\' ---> SNAKE win \n");
-    Sleep(200);
+    Sleep(30);
 
     printstringfast("\'SNAKE\' +  \'GUN\'  ---> GUN win \n");
-    Sleep(200);
+    Sleep(30);
 
     printstringfast("\'WATER\' + \'SNAKE\' ---> SNAKE win \n");
-    Sleep(200);
+    Sleep(30);
 
     printstringfast("\'WATER\' +  \'GUN\'  ---> WATER win \n");
-    Sleep(200);
+    Sleep(30);
 
     printstringfast(" \'GUN\'  + \'SNAKE\' ---> GUN win \n");
-    Sleep(200);
+    Sleep(30);
 
     printstringfast(" \'GUN\'  + \'WATER\' ---> WATER win \n\n");
     system("pause");
@@ -453,5 +460,5 @@ void interFace(){
     SetConsoleTextAttribute(h,6);
     cout<<" SNAKE, WATER, GUN";
     SetConsoleTextAttribute(h,5);
-    cout<<" [GAME] **************************"<<endl<<endl<<endl;
+    cout<<" [GAME] **************************\n\n\n";
     }
