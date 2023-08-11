@@ -47,6 +47,7 @@ using namespace std;
             else{
             printstringfast(" times");
             }
+            Sleep(400);
         }
         int check = rungame();
 
