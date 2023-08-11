@@ -41,12 +41,7 @@ using namespace std;
         if(counter < 10){
             printstringfast("You have remaining --> ");
             cout<<counter;
-            if(counter == 1){
-             printstringfast(" time");
-            }
-            else{
             printstringfast(" times");
-            }
             Sleep(400);
         }
         int check = rungame();
