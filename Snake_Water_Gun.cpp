@@ -42,7 +42,7 @@ using namespace std;
             printstringfast("You have remaining --> ");
             cout<<counter;
             printstringfast(" times");
-            Sleep(400);
+            Sleep(200);
         }
         int check = rungame();
 
