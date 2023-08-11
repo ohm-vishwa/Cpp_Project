@@ -23,7 +23,7 @@ using namespace std;
     void printstringfast(string printinloop);
 
     int main(){
-    // interFace();
+    interFace();
        
     system("Color A");
     Sleep(300);
