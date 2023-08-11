@@ -52,7 +52,7 @@ using namespace std;
         int check = rungame();
 
         setColor(5);
-    for(int i = 0 ; i <= 75 ; i++){
+    for(int i = 0 ; i <= 65 ; i++){
         cout<<"-";
         if(i%2 == 0){
                 Sleep(1);
@@ -69,7 +69,7 @@ using namespace std;
             score = 0;
         setColor(5);
 
-    for(int i = 0 ; i <= 75 ; i++){
+    for(int i = 0 ; i <= 65 ; i++){
         cout<<"-";
         if(i%2 == 0){
                 Sleep(1);
