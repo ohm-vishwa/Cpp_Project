@@ -23,11 +23,10 @@ using namespace std;
     void printstringfast(string printinloop);
 
     int main(){
-    interFace();
+    // interFace();
        
     system("Color A");
     Sleep(300);
-
     system("cls");
         
     intro();
@@ -36,14 +35,21 @@ using namespace std;
 
     while (counter > 0){
         SetConsoleTextAttribute(h,8);
-        cout<<"You have remaining --> "<<counter;
-        cout<<" times";
+        if(counter < 10){
+            cout<<"You have remaining --> "<<counter;
+            if(counter == 1){
+             cout<<" time";
+            }
+            else{
+            cout<<" times";
+            }
+        }
         int check = rungame();
 
         SetConsoleTextAttribute(h,5);
     for(int i = 0 ; i <= 65 ; i++){
         cout<<"-";
-        Sleep(15);
+        Sleep(1);
         }
         
         counter--;
@@ -58,7 +64,7 @@ using namespace std;
 
     for(int i = 0 ; i <= 65 ; i++){
         cout<<"-";
-        Sleep(15);
+        Sleep(1);
         }
 
         SetConsoleTextAttribute(h,9);
@@ -87,11 +93,8 @@ using namespace std;
         printstring(userName);
         SetConsoleTextAttribute(h,7);
         printstring(" for playing... ");
+        Sleep(5000);   
 
-        Sleep(5000);
-        system("cls");
-        system("Color A");
-        
         return 0;
     }
 
@@ -100,23 +103,22 @@ using namespace std;
     void printstring(string printinloop){
         for(int i = 0 ; printinloop[i] != '\0' ; i++){
             cout<<printinloop[i];
-            Sleep(30);
+            Sleep(25);
         }
     }
 
     void printstringfast(string printinloop){
         for(int i = 0 ; printinloop[i] != '\0' ; i++){
             cout<<printinloop[i];
-            Sleep(15);
+            Sleep(12);
         }
     }
 
 
 void interFace(){
     SetConsoleTextAttribute(h,4);
-    printstringfast("maximize Terminal for better experience.");
-    Sleep(1500);
-    cout<<endl<<endl;
+    printstringfast("maximize Terminal for better experience.\n\n");
+    Sleep(500);
     SetConsoleTextAttribute(h,14);
 
     printstringfast("Enter your nick name ---> ");
@@ -133,13 +135,13 @@ void interFace(){
     SetConsoleTextAttribute(h,10);
 
      if(T <= 11){
-        printstring("Good Morning ");
+        printstringfast("Good Morning ");
      }
      else if(T >= 12 && T <= 14){
-        printstring("Good Afternoon ");
+        printstringfast("Good Afternoon ");
      }
      else if(T >= 15){
-        printstring("Good Evening ");
+        printstringfast("Good Evening ");
      }
 
     SetConsoleTextAttribute(h,14);
@@ -147,10 +149,10 @@ void interFace(){
     cout<<",\n\n";
 
     Sleep(500);
-    printstring("your opponent is your PC -> ");
+    printstringfast("your opponent is your PC -> ");
     SetConsoleTextAttribute(h,10);
 
-    printstring(ComputerName);
+    printstringfast(ComputerName);
     SetConsoleTextAttribute(h,14);
     cout<<endl<<endl;
     Sleep(500);
@@ -160,20 +162,10 @@ void interFace(){
     Sleep(30);
 
     printstringfast("\'SNAKE\' + \'WATER\' ---> SNAKE win \n");
-    Sleep(30);
-
     printstringfast("\'SNAKE\' +  \'GUN\'  ---> GUN win \n");
-    Sleep(30);
-
     printstringfast("\'WATER\' + \'SNAKE\' ---> SNAKE win \n");
-    Sleep(30);
-
     printstringfast("\'WATER\' +  \'GUN\'  ---> WATER win \n");
-    Sleep(30);
-
     printstringfast(" \'GUN\'  + \'SNAKE\' ---> GUN win \n");
-    Sleep(30);
-
     printstringfast(" \'GUN\'  + \'WATER\' ---> WATER win \n\n");
     system("pause");
     }
@@ -414,51 +406,41 @@ void interFace(){
 
     void intro(){
     SetConsoleTextAttribute(h,5);
-    cout<<endl<<endl;
-    cout<<"********************************************************************************"<<endl;
-    Sleep(50);
-    SetConsoleTextAttribute(h,5);
+    cout<<"\n\n********************************************************************************"<<endl;
+    Sleep(100);
     cout<<"* ";
-    SetConsoleTextAttribute(h,15); 
+    SetConsoleTextAttribute(h,3); 
     cout<<"##          ## ######## ##       ######## ########## ####      #### ########"; 
     SetConsoleTextAttribute(h,5);
-    cout<<" *"<<endl;
-    Sleep(50);   
-    SetConsoleTextAttribute(h,5);
+    cout<<" *\n";
+    Sleep(100);   
     cout<<"* ";
-    SetConsoleTextAttribute(h,15); 
+    SetConsoleTextAttribute(h,3); 
     cout<<"##   ####   ## ##       ##       ##       ##      ## ## ##    ## ## ##      "; 
     SetConsoleTextAttribute(h,5);
-    cout<<" *"<<endl;
-    Sleep(50);   
-    SetConsoleTextAttribute(h,5);
+    cout<<" *\n";
+    Sleep(100);   
     cout<<"* ";
-    SetConsoleTextAttribute(h,15); 
+    SetConsoleTextAttribute(h,3); 
     cout<<"##  ##  ##  ## ######## ##       ##       ##      ## ##  ##  ##  ## ########"; 
     SetConsoleTextAttribute(h,5);
-    cout<<" *";
-    cout<<endl;
-    Sleep(50);   
-    SetConsoleTextAttribute(h,5);
+    cout<<" *\n";
+    Sleep(100);   
     cout<<"* ";
-    SetConsoleTextAttribute(h,15); 
+    SetConsoleTextAttribute(h,3); 
     cout<<"## ##    ## ## ##       ##       ##       ##      ## ##   ####   ## ##      "; 
     SetConsoleTextAttribute(h,5);
-    cout<<" *";
-    cout<<endl;
-    Sleep(50);   
-    SetConsoleTextAttribute(h,5);
+    cout<<" *\n";
+    Sleep(100);   
     cout<<"* ";
-    SetConsoleTextAttribute(h,15); 
+    SetConsoleTextAttribute(h,3); 
     cout<<"####      #### ######## ######## ######## ########## ##          ## ########"; 
     SetConsoleTextAttribute(h,5);
-    cout<<" *";
-    cout<<endl;
-    SetConsoleTextAttribute(h,5);
-    Sleep(50);
+    cout<<" *\n";
+    Sleep(100);
     cout<<"********************* TO THE";
-    SetConsoleTextAttribute(h,6);
+    SetConsoleTextAttribute(h,1);
     cout<<" SNAKE, WATER, GUN";
     SetConsoleTextAttribute(h,5);
-    cout<<" [GAME] **************************\n\n\n";
+    cout<<" [GAME] **************************\n\n";
     }
