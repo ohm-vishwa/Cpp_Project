@@ -27,11 +27,8 @@ using namespace std;
 
     int main(){
     interFace();
-       
-    system("Color A");
-    Sleep(300);
-    system("cls");
-        
+    system("cls");  
+    Sleep(700);
     intro();
     Sleep(500);
     setColor(11);
@@ -49,9 +46,7 @@ using namespace std;
         setColor(5);
     for(int i = 0 ; i <= 65 ; i++){
         cout<<"-";
-        if(i%2 == 0){
-                Sleep(1);
-            }
+        Sleep(1);
         }
         
         counter--;
@@ -66,9 +61,7 @@ using namespace std;
 
     for(int i = 0 ; i <= 65 ; i++){
         cout<<"-";
-        if(i%2 == 0){
-                Sleep(1);
-            }
+        Sleep(1);
         }
 
         setColor(9);
@@ -114,9 +107,7 @@ using namespace std;
     void printstringfast(string printinloop){
         for(int i = 0 ; printinloop[i] != '\0' ; i++){
             cout<<printinloop[i];
-            if(i%2 == 0){
-                Sleep(1);
-            }
+            Sleep(10);
         }
     }
 
@@ -192,22 +183,22 @@ using namespace std;
     setColor(9);
     printstringfast("\nPress:");
     setColor(11);
-    printstringfast(" [1]-> ");
+    printstringfast(" [1]=> ");
     setColor(14);
     printstringfast("SANKE");
     setColor(11);
-    printstringfast(" [2]-> ");
+    printstringfast("  [2]=> ");
     setColor(14);
     printstringfast("WATER");
     setColor(11);
-    printstringfast(" [3]-> ");
+    printstringfast("  [3]=> ");
     setColor(14);
     printstringfast("GUN");
-    setColor(11);
-    printstringfast(" ===> ");
+    setColor(7);
+    printstringfast(" ==> ");
     cin>>user;
-    cout<<endl;
-        
+    cout<<endl;   
+
     srand(time(0));
     computer = (rand()/counter)%3 + 49;
         
@@ -224,12 +215,12 @@ using namespace std;
         printstringfast(ComputerName);
         cout<<" : "; 
         setColor(112); 
+        Sleep(1100);
         printstringfast(" SNAKE "); 
         setColor(11); 
         printstringfast(" ---> "); 
         Sleep(200); 
-        cout<<(char)2<<" ";
-        Sleep(800); 
+        cout<<(char)2<<" ";    
         setColor(192); 
         cout<<" "; 
         printstringfast(ComputerName);
@@ -249,12 +240,12 @@ using namespace std;
         printstringfast(ComputerName);
         cout<<" : "; 
         setColor(112); 
+        Sleep(1100);
         printstringfast(" WATER "); 
         setColor(11); 
         printstringfast(" ---> "); 
         Sleep(200); 
-        cout<<(char)2<<" ";
-        Sleep(800);  
+        cout<<(char)2<<" ";      
         setColor(192); 
         printstringfast(" "); 
         printstringfast(ComputerName);
@@ -274,12 +265,12 @@ using namespace std;
         printstringfast(ComputerName);
         cout<<" : "; 
         setColor(112); 
+        Sleep(1100);
         printstringfast(" GUN ");  
         setColor(11); 
         printstringfast(" ---> "); 
         Sleep(200); 
-        cout<<(char)2<<" ";
-        Sleep(800);  
+        cout<<(char)2<<" ";         
         setColor(192); 
         printstringfast(" ");
         printstringfast(ComputerName);
@@ -299,12 +290,12 @@ using namespace std;
         printstringfast(ComputerName);
         cout<<" : "; 
         setColor(112); 
+        Sleep(1100);
         printstringfast(" SNAKE "); 
         setColor(11); 
         printstringfast(" ---> "); 
         Sleep(200); 
-        cout<<(char)2<<" ";
-        Sleep(800);  
+        cout<<(char)2<<" ";         
         setColor(160); 
         printstringfast(" ");
         printstringfast(userName);
@@ -325,12 +316,12 @@ using namespace std;
         printstringfast(ComputerName);
         cout<<" : "; 
         setColor(112); 
+        Sleep(1100);
         printstringfast(" WATER "); 
         setColor(11); 
         printstringfast(" ---> "); 
         Sleep(200); 
-        cout<<(char)2<<" ";
-        Sleep(800);  
+        cout<<(char)2<<" ";        
         setColor(160); 
         printstringfast(" ");
         printstringfast(userName);
@@ -351,12 +342,12 @@ using namespace std;
         printstringfast(ComputerName);
         cout<<" : "; 
         setColor(112); 
+        Sleep(1100);
         printstringfast(" GUN ");  
         setColor(11); 
         printstringfast(" ---> "); 
         Sleep(200); 
-        cout<<(char)2<<" ";
-        Sleep(800);  
+        cout<<(char)2<<" ";         
         setColor(160); 
         printstringfast(" ");
         printstringfast(userName);
@@ -377,12 +368,12 @@ using namespace std;
         printstringfast(ComputerName);
         cout<<" : "; 
         setColor(112); 
+        Sleep(1100);
         printstringfast(" SNAKE "); 
         setColor(11); 
         printstringfast(" ---> "); 
         Sleep(200); 
-        cout<<(char)2<<" ";
-        Sleep(800);  
+        cout<<(char)2<<" ";         
         setColor(224); 
         printstringfast(" Match Drawn "); 
         setColor(11); 
@@ -401,12 +392,12 @@ using namespace std;
          printstringfast(ComputerName);
          cout<<" : "; 
          setColor(112); 
+         Sleep(1100);
          printstringfast(" WATER "); 
          setColor(11); 
          printstringfast(" ---> "); 
          Sleep(200); 
-         cout<<(char)2<<" ";
-         Sleep(800);  
+         cout<<(char)2<<" ";           
          setColor(224); 
          printstringfast(" Match Drawn "); 
          setColor(11); 
@@ -425,12 +416,12 @@ using namespace std;
          printstringfast(ComputerName);
          cout<<" : "; 
          setColor(112); 
+         Sleep(1100);
          printstringfast(" GUN ");  
          setColor(11); 
          printstringfast(" ---> "); 
          Sleep(200); 
-         cout<<(char)2<<" ";
-         Sleep(800);  
+         cout<<(char)2<<" ";         
          setColor(224); 
          printstringfast(" Match Drawn "); 
          setColor(11); 
