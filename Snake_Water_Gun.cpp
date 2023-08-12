@@ -39,7 +39,6 @@ using namespace std;
             printstringfast("You have remaining --> ");
             cout<<counter;
             printstringfast(" times");
-            Sleep(200);
         }
         int check = rungame();
 
@@ -107,14 +106,14 @@ using namespace std;
     void printstringfast(string printinloop){
         for(int i = 0 ; printinloop[i] != '\0' ; i++){
             cout<<printinloop[i];
-            Sleep(10);
+            Sleep(1);
         }
     }
 
     void printstringfast2(string printinloop){
         for(int i = 0 ; printinloop[i] != '\0' ; i++){
             cout<<printinloop[i];
-        if(i%4 == 0){
+        if(i%22 == 0){
             Sleep(1);
         }
         }
@@ -194,7 +193,7 @@ using namespace std;
     printstringfast("  [3]=> ");
     setColor(14);
     printstringfast("GUN");
-    setColor(7);
+    setColor(9);
     printstringfast(" ==> ");
     cin>>user;
     cout<<endl;   
