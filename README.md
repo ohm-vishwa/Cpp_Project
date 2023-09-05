@@ -1,4 +1,4 @@
-Hello! I'm Om a student of DAV IET palamu in CSE Branch.
+Hello! I'm Om a student of DAV Institute of Engineering and Technology palamu.
 
 This is very old Game Snake, Water, Gun similar to Rock, Paper, Sicssor.
 
