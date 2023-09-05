@@ -1,4 +1,4 @@
-Hello! I'm Om a student of CSE Branch in DAV IET Daltongaj, Palamu, Jharkhand.
+Hello! I'm Om a student of DAV IET Daltongaj in CSE Branch, Palamu, Jharkhand.
 
 This is very old Game Snake, Water, Gun similar to Rock, Paper, Sicssor.
 
