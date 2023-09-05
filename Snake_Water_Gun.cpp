@@ -6,15 +6,13 @@
 #include <limits>
 
 using namespace std;
-
-    HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
     string userName;        // User name input string itself
     string ComputerName;    // PC name given by User
     string computer;        // PC random number explicit type casted as string
     string ask;             // ask for play again y/n
-    string user;            // for user input 1,2,3 (string: to protect from long input or character input)
-
+    string user;            // for user input 1,2,3 (string: to protect from long input or character input
 
     int score = 0;
     int counter = 10;
