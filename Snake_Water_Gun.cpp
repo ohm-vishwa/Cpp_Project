@@ -10,23 +10,23 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
     string userName;        // User name input string itself
     string ComputerName;    // PC name given by User
-    string computer;        // PC random number explicit type casted as string
-    string ask;             // ask for play again y/n
-    string user;            // for user input 1,2,3 (string: to protect from long input or character input
+    string computer;        // PC random number explicit type casted as character at first index;
+    string ask;             // ask for play again y/n as ask[0]
+    string user;            // for user input 1,2,3 (string: to protect from error)
 
     int score = 0;
     int counter = 10;
 
-    void intro();                   // print welcome
+    void intro();                   // welcome animation
     void interFace();               // for required input or playing rules
      int rungame();                 // sanke, water, gun game
-    void guessNumber();             // Another guess game
-    void printstring(string);       // print every character of input string in a loop with delay
+    void guessNumber();             // Another guess number game
+    void printstring(string);       // print each character of input string in a loop with delay
     void printstringfast(string);   // less delay
     void printstringfast2(string);  // very less delay
     void setColor(int);             // for text color
-    void pcNameCall();              // print PC Name given by user like this : @om_kumar/>
-    void userNameCall();            // print user name 
+    void pcNameCall();              // print PC Name given by user like this : @pc_name/>
+    void userNameCall();            // print user name @user_name/>
 
     int main(){
         interFace();
@@ -54,7 +54,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                     }
                 }
     
-                int check = rungame();             
+                int check = rungame();        //<-------- run game
                 setColor(5);
     
                 for(int i = 0 ; i <= 80 ; i++){
@@ -130,7 +130,8 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
         return 0;
     }
 
-    // <----------------------------------------Functions Definition------------------------------------------------------>
+
+    /* <----------------------------------------Functions Definition------------------------------------------------------> */
     void printstring(string printinloop){
         for(int i = 0 ; printinloop[i] != '\0' ; i++){
             cout <<  printinloop[i];
@@ -397,7 +398,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 printstringfast(ComputerName);
                 printstringfast(" win "); 
                 setColor(11); 
-                cout <<  endl <<  endl;  // user lose
+                cout <<  endl <<  endl;              // user lose
 
                 return 0;
             }
@@ -423,7 +424,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 printstringfast(ComputerName);
                 printstringfast(" win "); 
                 setColor(11); 
-                cout <<  endl <<  endl;  // user lose
+                cout <<  endl <<  endl;              // user lose
 
                 return 0;
             }
@@ -449,7 +450,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 printstringfast(ComputerName);
                 printstringfast(" win "); 
                 setColor(11);
-                cout <<  endl <<  endl;  // user lose
+                cout <<  endl <<  endl;              // user lose
                 
                 return 0;
             }
@@ -475,7 +476,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 printstringfast(userName);
                 printstringfast(" win "); 
                 setColor(11); 
-                cout <<  endl <<  endl;   // user win
+                cout <<  endl <<  endl;               // user win
                 score++;
 
                 return 1;
@@ -502,7 +503,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 printstringfast(userName);
                 printstringfast(" win "); 
                 setColor(11); 
-                cout <<  endl <<  endl; // user win
+                cout <<  endl <<  endl;             // user win
                 score++;
 
                 return 1;
@@ -529,7 +530,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 printstringfast(userName);
                 printstringfast(" win "); 
                 setColor(11); 
-                cout <<  endl <<  endl; // user win
+                cout <<  endl <<  endl;             // user win
                 score++;
 
                 return 1;
@@ -554,7 +555,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 setColor(224); 
                 printstringfast(" Match Drawn "); 
                 setColor(11); 
-                cout <<  endl <<  endl;   // match drawn
+                cout <<  endl <<  endl;              // match drawn
                 counter++;
 
                 return 2;
@@ -579,7 +580,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 setColor(224); 
                 printstringfast(" Match Drawn "); 
                 setColor(11); 
-                cout <<  endl <<  endl;   // match drawn
+                cout <<  endl <<  endl;           // match drawn
                 counter++;
 
                 return 2;
@@ -604,7 +605,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 setColor(224); 
                 printstringfast(" Match Drawn "); 
                 setColor(11); 
-                cout <<  endl <<  endl;   // match drawn
+                cout <<  endl <<  endl;           // match drawn
                 counter++;
 
                 return 2;
@@ -621,6 +622,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
     }
 
 
+    //welcome
     void intro(){
         setColor(5);
         printstringfast2("\n\n\t\t\t********************************************************************************\n");
