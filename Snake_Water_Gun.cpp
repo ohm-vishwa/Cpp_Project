@@ -113,19 +113,19 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
     
             Sleep(1000);
 
-            setColor(10);
-            printstring("\n\n@ohm_vishwa/> ");
-            setColor(14);
-            printstring("Thanks ");
-            setColor(12);
-            cout <<  (char)3 <<  " ";      // print heart symboll
-            setColor(10);
-            printstring(userName);
-            setColor(14);
-            printstring(" for playing.");
+        setColor(10);
+        printstring("\n\n@ohm_vishwa/> ");
+        setColor(14);
+        printstring("Thanks ");
+        setColor(12);
+        cout <<  (char)3 <<  " ";      // print heart symboll
+        setColor(10);
+        printstring(userName);
+        setColor(14);
+        printstring(" for playing.");
     
-            Sleep(5000);   
-            setColor(7);
+        Sleep(5000);   
+        setColor(7);
 
         return 0;
     }
