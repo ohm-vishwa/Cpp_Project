@@ -19,7 +19,7 @@ using namespace std;
     int score = 0;
     int counter = 10;
 
-    // functions decleration, definition in below
+    // functions decleration, definition below
 
     void intro();                   // print welcome
     void interFace();               // for required input or playing rules
