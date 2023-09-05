@@ -9,23 +9,21 @@ using namespace std;
 
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
-    string userName;        // User name itself
+    string userName;        // User name input string itself
     string ComputerName;    // PC name given by User
-    string computer;        // PC random number explicite type casted as string
-    string ask;             // ask for play again
+    string computer;        // PC random number explicit type casted as string
+    string ask;             // ask for play again y/n
     string user;            // for user input 1,2,3 (string: to protect from long input or character input)
 
 
     int score = 0;
     int counter = 10;
 
-    // functions decleration, definition below
-
     void intro();                   // print welcome
     void interFace();               // for required input or playing rules
      int rungame();                 // sanke, water, gun game
     void guessNumber();             // Another guess game
-    void printstring(string);       //print every character of input string in a loop with delay
+    void printstring(string);       // print every character of input string in a loop with delay
     void printstringfast(string);   // less delay
     void printstringfast2(string);  // very less delay
     void setColor(int);             // for text color
