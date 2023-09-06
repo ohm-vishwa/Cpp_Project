@@ -7,6 +7,9 @@
 #include <chrono>
 #include <thread>
 
+#define frameDelay 50
+#define numIterations 8
+
 using namespace std;
 HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -19,9 +22,9 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
     int score = 0;
     int counter = 10;
 
+     int rungame();                 // sanke, water, gun game
     void intro();                   // welcome animation
     void interFace();               // for required input or playing rules
-     int rungame();                 // sanke, water, gun game
     void guessNumber();             // Another guess number game
     void printstring(string);       // print each character of input string in a loop with delay
     void printstringfast(string);   // less delay
@@ -68,6 +71,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 }
     
                 counter--;
+                
                 setColor(11);
     
                 if(check == 9){
@@ -185,18 +189,13 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
         setColor(14);
     }
 
+
     void loadingAnimation(){
         // Define an array of spinner characters
-        const char spinner[] = { '|', '/', '-', '\\' };
+        char spinner[] = { '|', '/', '-', '\\' };
     
         // Number of spinner frames
-        const int numFrames = sizeof(spinner) / sizeof(spinner[0]);
-    
-        // Number of animation iterations
-        const int numIterations = 8;
-    
-        // Delay between frames in milliseconds
-        const int frameDelay = 50;
+        int numFrames = sizeof(spinner) / sizeof(spinner[0]);
     
         for (int iter = 0; iter < numIterations; ++iter) {
             for (int frame = 0; frame < numFrames; ++frame) {
@@ -326,9 +325,10 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
 
     void interFace(){
-        
+
         setColor(4);
         printstring("maximize Terminal for better experience.\n\n");
+        
         Sleep(500);
 
         setColor(14);
