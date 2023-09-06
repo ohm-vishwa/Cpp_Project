@@ -4,6 +4,8 @@
 #include <ctime>
 #include <string>
 #include <limits>
+#include <chrono>
+#include <thread>
 
 using namespace std;
 HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -27,12 +29,15 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
     void setColor(int);             // for text color
     void pcNameCall();              // print PC Name given by user like this : @pc_name/>
     void userNameCall();            // print user name @user_name/>
+    void loadingAnimation();
 
     int main(){
         interFace();
 
-        system("cls");  
-        Sleep(700);     //for delay
+        loadingAnimation();
+
+        Sleep(1000);     //for delay
+
 
         intro();
 
@@ -180,6 +185,36 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
         setColor(14);
     }
 
+    void loadingAnimation(){
+        // Define an array of spinner characters
+        const char spinner[] = { '|', '/', '-', '\\' };
+    
+        // Number of spinner frames
+        const int numFrames = sizeof(spinner) / sizeof(spinner[0]);
+    
+        // Number of animation iterations
+        const int numIterations = 8;
+    
+        // Delay between frames in milliseconds
+        const int frameDelay = 50;
+    
+        for (int iter = 0; iter < numIterations; ++iter) {
+            for (int frame = 0; frame < numFrames; ++frame) {
+
+                cout << "\033[2J\033[H"; 
+            
+                // Print the spinner frame
+                cout << "\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tLoading... " << spinner[frame] << flush;
+            
+                // Delay before the next frame
+                this_thread::sleep_for(chrono::milliseconds(frameDelay));
+            }
+        }
+    
+        // Clear the console screen after the animation
+        cout << "\033[2J\033[H"; 
+    }
+
 
     void guessNumber(){
         pcNameCall();
@@ -291,11 +326,12 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
 
     void interFace(){
+        
         setColor(4);
         printstring("maximize Terminal for better experience.\n\n");
         Sleep(500);
-        setColor(14);
 
+        setColor(14);
         printstring("Enter your nick name ---> ");
         getline(cin,userName);
         printstring("Give name to your PC ---> ");
@@ -477,6 +513,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 printstringfast(" win "); 
                 setColor(11); 
                 cout <<  endl <<  endl;               // user win
+
                 score++;
 
                 return 1;
@@ -504,6 +541,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 printstringfast(" win "); 
                 setColor(11); 
                 cout <<  endl <<  endl;             // user win
+
                 score++;
 
                 return 1;
@@ -531,6 +569,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 printstringfast(" win "); 
                 setColor(11); 
                 cout <<  endl <<  endl;             // user win
+
                 score++;
 
                 return 1;
@@ -556,6 +595,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 printstringfast(" Match Drawn "); 
                 setColor(11); 
                 cout <<  endl <<  endl;              // match drawn
+
                 counter++;
 
                 return 2;
@@ -581,6 +621,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 printstringfast(" Match Drawn "); 
                 setColor(11); 
                 cout <<  endl <<  endl;           // match drawn
+
                 counter++;
 
                 return 2;
@@ -606,6 +647,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 printstringfast(" Match Drawn "); 
                 setColor(11); 
                 cout <<  endl <<  endl;           // match drawn
+
                 counter++;
 
                 return 2;
