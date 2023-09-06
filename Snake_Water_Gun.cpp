@@ -1,3 +1,17 @@
+/*
+This is a game programme based on Snake-Water-Gun similary to the the Rock-Paper-Scissors.
+also another guess game in this programme.
+
+Their is no any OOPs concept used in this programme, only basic concepts is used.
+playable in code editor terminal or you can compile and run executable file any where on your desktop.
+
+compile only in offline environment.
+don`t try to execute on online c++ compiler, online compiler can throw error because online compiler
+doesn`t have <windows.h> header file.
+
+I hope you will enjoy my small piece of code. @ohm 
+*/
+
 #include <iostream>
 #include <windows.h>
 #include <stdlib.h>
