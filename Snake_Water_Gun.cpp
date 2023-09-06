@@ -1,5 +1,5 @@
 /*
-This is a game programme based on Snake-Water-Gun similary to the the Rock-Paper-Scissors.
+This is a game programme based on Snake-Water-Gun similar to the the Rock-Paper-Scissors.
 also another guess game in this programme.
 
 Their is no any OOPs concept used in this programme, only basic concepts is used.
