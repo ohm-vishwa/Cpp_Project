@@ -1,4 +1,4 @@
-Hello! I'm Om a `student of DAV Institute of Engineering and Technology palamu.`
+Hello! I'm Om a student of `DAV Institute of Engineering and Technology palamu.`
 
 This is a game programme based on `Snake-Water-Gun similar` to the the `Rock-Paper-Scissor.`
 also another guess number game included in this programme.
