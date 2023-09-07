@@ -1,6 +1,6 @@
 /*
 This is a game programme based on Snake-Water-Gun similar to the the Rock-Paper-Scissor.
-also another guess game included in this programme.
+also another guess number game included in this programme.
 
 Their is no any OOPs concept used in this programme, only basic concepts are used.
 playable in code editor terminal or you can compile and run executable file any where on your desktop.
