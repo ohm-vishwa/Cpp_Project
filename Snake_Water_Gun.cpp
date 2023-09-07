@@ -1,13 +1,13 @@
 /*
-This is a game programme based on Snake-Water-Gun similar to the the Rock-Paper-Scissors.
-also another guess game in this programme.
+This is a game programme based on Snake-Water-Gun similar to the the Rock-Paper-Scissor.
+also another guess game included in this programme.
 
-Their is no any OOPs concept used in this programme, only basic concepts is used.
+Their is no any OOPs concept used in this programme, only basic concepts are used.
 playable in code editor terminal or you can compile and run executable file any where on your desktop.
 
 compile only in offline environment.
 don`t try to execute on online c++ compiler, online compiler can throw error because online compiler
-doesn`t have <windows.h> header file.
+doesn`t have <windows.h> header file in it`s directory.
 
 I hope you will enjoy my small piece of code. @ohm 
 */
@@ -21,15 +21,15 @@ I hope you will enjoy my small piece of code. @ohm
 #include <chrono>
 #include <thread>
 
-#define frameDelay 50
-#define numIterations 8
+#define frameDelay 50   // loading animation part
+#define numIterations 8 //          ||
 
 using namespace std;
-HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);     // Console Text color Attribute variable
 
     string userName;        // User name input string itself
     string ComputerName;    // PC name given by User
-    string computer;        // PC random number explicit type casted as character at first index;
+    string computer;        // PC random number explicit type casting as character at first index;
     string ask;             // ask for play again y/n as ask[0]
     string user;            // for user input 1,2,3 (string: to protect from error)
 
@@ -37,28 +37,26 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
     int counter = 10;
 
      int rungame();                 // sanke, water, gun game
-    void intro();                   // welcome animation
-    void interFace();               // for required input or playing rules
     void guessNumber();             // Another guess number game
+    void setColor(int);             // for text color
     void printstring(string);       // print each character of input string in a loop with delay
     void printstringfast(string);   // less delay
     void printstringfast2(string);  // very less delay
-    void setColor(int);             // for text color
+    void interFace();               // for required input or playing rules
+    void loadingAnimation();        // loading animtion
+    void intro();                   // welcome animation
     void pcNameCall();              // print PC Name given by user like this : @pc_name/>
     void userNameCall();            // print user name @user_name/>
-    void loadingAnimation();
 
     int main(){
         interFace();
 
         loadingAnimation();
-
         Sleep(1000);     //for delay
 
-
         intro();
-
         Sleep(500);
+
         setColor(11);
 
         while (counter > 0){
@@ -76,10 +74,10 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                     }
                 }
     
-                int check = rungame();        //<-------- run game
+                int check = rungame();    
                 setColor(5);
     
-                for(int i = 0 ; i <= 80 ; i++){
+                for(int i = 0 ; i <= 80 ; i++){      // print ------------------
                     cout <<  "-";
                     Sleep(1);
                 }
@@ -97,7 +95,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
                     setColor(5);
 
-                    for(int i = 0 ; i <= 80 ; i++){
+                    for(int i = 0 ; i <= 80 ; i++){         // print -----------------
                         cout <<  "-";
                         Sleep(1);
                     }
@@ -110,7 +108,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                     cin >> ask;
     
                     if(ask[0] == 'y'){
-                        counter = 10;
+                        counter = 10;       // counter reset
                     }
                 }
     
@@ -125,7 +123,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 }
             }
     
-            guessNumber();
+            guessNumber();         
     
             // Iterate through the string and underscores with replace spaces
             for (char &c : userName) {
@@ -134,7 +132,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 }
             } 
     
-            Sleep(1000);
+        Sleep(1000);
 
         setColor(10);
         printstring("\n\n@ohm_vishwa/> ");
@@ -146,7 +144,6 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
         printstring(userName);
         setColor(14);
         printstring(" for playing.");
-    
         Sleep(5000);   
         setColor(7);
 
@@ -243,7 +240,6 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
                 }
         }
     
-
         Sleep(500);
 
         pcNameCall();
@@ -262,7 +258,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
         }
         else{
 
-            srand(time(0));
+            srand(time(0));       // use system time to pick a randam number
 
             // Generate a random number between 1 and 100
             int randomNumber = rand() % 100 + 1;
