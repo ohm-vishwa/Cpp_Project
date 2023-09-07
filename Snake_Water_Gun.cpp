@@ -7,7 +7,7 @@ playable in code editor terminal or you can compile and run executable file any 
 
 compile only in offline environment.
 don`t try to execute on online c++ compiler, online compiler can throw error because online compiler
-doesn`t have <windows.h> header file in it`s directory.
+doesn`t have <windows.h> library in it`s directory.
 
 I hope you will enjoy my small piece of code. @ohm 
 */
@@ -21,11 +21,11 @@ I hope you will enjoy my small piece of code. @ohm
 #include <chrono>
 #include <thread>
 
-#define frameDelay 50   // loading animation part
-#define numIterations 8 //          ||
+#define frameDelay 70   // loading animation part
+#define numIterations 12 
 
 using namespace std;
-HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);     // Console Text color Attribute variable
+HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);     // Console Text color Attribute
 
     string userName;        // User name input string itself
     string ComputerName;    // PC name given by User
@@ -214,7 +214,11 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);     // Console Text color Attribute 
                 cout << "\033[2J\033[H"; 
             
                 // Print the spinner frame
-                cout << "\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tLoading... " << spinner[frame] << flush;
+                cout << "\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tLoading";
+                for (int i = 0 ; i < iter ; i++){
+                    cout << ".";
+                }
+                cout << spinner[frame] << flush;
             
                 // Delay before the next frame
                 this_thread::sleep_for(chrono::milliseconds(frameDelay));
