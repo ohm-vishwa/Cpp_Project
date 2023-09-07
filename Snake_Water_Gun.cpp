@@ -77,7 +77,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);     // Console Text color Attribute
                 int check = rungame();    
                 setColor(5);
     
-                for(int i = 0 ; i <= 65 ; i++){      // print ------------------
+                for(int i = 0 ; i <= 70 ; i++){      // print ------------------
                     cout <<  "-";
                     Sleep(1);
                 }
@@ -95,7 +95,7 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);     // Console Text color Attribute
 
                     setColor(5);
 
-                    for(int i = 0 ; i <= 65 ; i++){         // print -----------------
+                    for(int i = 0 ; i <= 70 ; i++){         // print -----------------
                         cout <<  "-";
                         Sleep(1);
                     }
