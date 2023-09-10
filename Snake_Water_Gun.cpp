@@ -1,9 +1,9 @@
 /*
-This is a game programme based on Snake-Water-Gun similar to the the Rock-Paper-Scissor.
+This is a game programme based on Snake-Water-Gun similar to the the Rock-Paper-Scissor
 also another guess number game included in this programme.
 
-Their is no any OOPs concept used in this programme, only basic concepts are used.
 playable in code editor terminal or you can compile and run executable file any where on your desktop.
+For vscode editor look edit your link above, add '1s' after github as --> github1s.com
 
 compile only in offline environment.
 don`t try to execute on online c++ compiler, online compiler can throw error because online compiler
@@ -12,233 +12,197 @@ doesn`t have <windows.h> library in it`s directory.
 I hope you will enjoy my small piece of code. @ohm 
 */
 
-#include <iostream>
+#include <bits/stdc++.h>
 #include <windows.h>
-#include <stdlib.h>
-#include <ctime>
-#include <string>
-#include <limits>
-#include <chrono>
-#include <thread>
 
-#define frameDelay 70   // loading animation part
-#define numIterations 12 
+#define frameDelay 60   // loading animation part
+#define numIterations 10 
 
 using namespace std;
-HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);     // Console Text color Attribute
+HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE); 
 
-    string userName;        // User name input string itself
-    string ComputerName;    // PC name given by User
-    string computer;        // PC random number explicit type casting as character at first index;
-    string ask;             // ask for play again y/n as ask[0]
-    string user;            // for user input 1,2,3 (string: to protect from error)
+string user_name;     
+string computer_name; 
 
-    int score = 0;
-    int counter = 10;
+class Game_swg {
+    private :
+        int user;   
+        int computer;        
+        int score = 0;
 
-     int rungame();                 // sanke, water, gun game
-    void guessNumber();             // Another guess number game
-    void setColor(int);             // for text color
-    void printstring(string);       // print each character of input string in a loop with delay
-    void printstringfast(string);   // less delay
-    void printstringfast2(string);  // very less delay
-    void interFace();               // for required input or playing rules
-    void loadingAnimation();        // loading animtion
-    void intro();                   // welcome animation
-    void pcNameCall();              // print PC Name given by user like this : @pc_name/>
-    void userNameCall();            // print user name @user_name/>
+    public :  
+        int counter = 10; 
 
-    int main(){
-        interFace();
+        friend class Game_guess;
 
-        loadingAnimation();
-        Sleep(1000);     //for delay
+        void welcome_animation();        
+        void set_name();
+        void rules();
+        void greet();
+        void run_game();                 
+        void show_remaing_time();
+        void get_Game_swg_input();
+        void game_body(string, string, string, int); 
+        void your_score();  
+        void ask();
+        void thanks();     
+};   
 
-        intro();
-        Sleep(500);
+class Game_guess : public Game_swg {
+        private :
+            int random_number = rand() % 100 + 1;
+            int guess;
+            int attempts = 0;
+        
+        public :
+            int is_agree();
+            void pc_name_call();
+            void user_name_call();
+            void run_guess_game();
+};
 
-        setColor(11);
+void set_color(int);             
+void loading_animation();        
+void print_style_1(string);
+void print_style_2(string);      
+void print_style_2(string, int);      
+void underline();
 
-        while (counter > 0){
-                setColor(8);
-    
-                if(counter < 10){
-                    printstringfast("You have remaining --> ");         // show remaining turns
-                    cout <<  counter;
-                    
-                    if(counter != 1){
-                        printstringfast(" times");
-                    }
-                    else{
-                        printstringfast(" time");
-                    }
-                }
-    
-                int check = rungame();    
-                setColor(5);
-    
-                for(int i = 0 ; i <= 70 ; i++){      // print ------------------
-                    cout <<  "-";
-                    Sleep(1);
-                }
-    
-                counter--;
-                
-                setColor(11);
-    
-                if(check == 9){
-                    counter++;
-                }
-                else if(counter == 0){
-                    cout  <<   "\nyour score is : "  <<   score  <<   " out of 10"  <<   endl;
-                    score = 0;
+int main(){
+    Game_swg game1_obj;
 
-                    setColor(5);
+    game1_obj.set_name();
+    game1_obj.greet();
+    game1_obj.rules();
 
-                    for(int i = 0 ; i <= 70 ; i++){         // print -----------------
-                        cout <<  "-";
-                        Sleep(1);
-                    }
-    
-                    setColor(14);
-                    printstring("\n\nAre you want to play again?\n");
-                    printstring("Enter 'y/n' for yes/no ===> ");
-                    
-                    setColor(9);
-                    cin >> ask;
-    
-                    if(ask[0] == 'y'){
-                        counter = 10;       // counter reset
-                    }
-                }
-    
-                setColor(10);
-                cout <<  endl;
-            } 
-    
-            // Iterate through the string and replace spaces with underscores
-            for (char &c : ComputerName) {
-                if (c == ' ') {
-                    c = '_';
-                }
-            }
-    
-            guessNumber();         
-    
-            // Iterate through the string and underscores with replace spaces
-            for (char &c : userName) {
-                if (c == '_') {
-                    c = ' ';
-                }
-            } 
-    
-        Sleep(1000);
+    loading_animation();
 
-        setColor(10);
-        printstring("\n\n@ohm_vishwa/> ");
-        setColor(14);
-        printstring("Thanks ");
-        setColor(12);
-        cout <<  (char)3 <<  " ";      // print heart symboll
-        setColor(10);
-        printstring(userName);
-        setColor(14);
-        printstring(" for playing.");
-        Sleep(5000);   
-        setColor(7);
+    game1_obj.welcome_animation();
+    
+    do{
+        while(game1_obj.counter != 0){
+            game1_obj.run_game(); 
+        }
+            game1_obj.your_score();
 
+        if(game1_obj.counter == 0){
+            game1_obj.ask();
+        }
+    }while(game1_obj.counter != 0);
+
+
+    Game_guess game2_obj;
+
+    if(game2_obj.is_agree()){
+        game2_obj.run_guess_game();
+    }
+    else{
+        game1_obj.thanks();
         return 0;
     }
+    game1_obj.thanks();
+    return 0;
+}
 
+/* <-------------------------------------------------------------->*/
+void Game_guess :: pc_name_call(){
+    set_color(10);
+    print_style_1("\n@");
+    print_style_1(computer_name);
+    print_style_1("/> ");
+    set_color(14);
+}
+void Game_guess :: user_name_call(){
+    set_color(11);
+    print_style_1("\n@");
+    print_style_1(user_name);
+    print_style_1("/> ");
+    set_color(14);
+}
+void Game_guess :: run_guess_game(){
+    pc_name_call();
+    set_color(14);
+    print_style_1("I choose a number between (1-100)\n");
+    pc_name_call();
+    print_style_1("guess my number.\n");
 
-    /* <----------------------------------------Functions Definition------------------------------------------------------> */
-    void printstring(string printinloop){
-        for(int i = 0 ; printinloop[i] != '\0' ; i++){
-            cout <<  printinloop[i];
-            Sleep(15);
+    for(int i = 1 ; i ; i++) {
+        if(i == 3){
+            pc_name_call();
+            print_style_1("[Hint] ===> ");
+            set_color(160);
+            print_style_1(" Use \"Divide & Conquer\" Method ");
+            set_color(7);
+            cout <<  endl;
+        }
+        user_name_call();
+        if(i != 1){
+            print_style_1("===> ");
+        }
+        else{
+            print_style_1("Enter your guess (1-100) ===> ");
+        }
+        set_color(9);
+
+        cin  >>  guess;
+
+        cin.clear();          // Clear error state
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+        attempts++;
+
+        if (guess < 1 || guess > 100) {
+            pc_name_call();
+            set_color(4);
+            print_style_1("Please enter a number between 1 and 100.\n");      // when input is not in range or not in integer domain
+            i--;
+            continue;
+        }
+
+        if (guess < random_number) {
+            pc_name_call();
+            set_color(4);
+            print_style_1("Too low! Try again with (greater number) ");
+            set_color(10);
+            cout<<(char)24;
+            cout<<endl;
+        } else if (guess > random_number) {
+            pc_name_call();
+            set_color(4);
+            print_style_1("Too High! Try again with (lower number) ");
+            set_color(10);
+            cout<<(char)25;
+            cout<<endl;
+        } else {
+            Sleep(300);
+            pc_name_call();
+            set_color(5);
+            print_style_1("Congratulations! You guessed the number ");
+            cout  <<   random_number  <<   " in "  <<   attempts  <<   " attempts."  <<  endl;
+            break;
         }
     }
-
-
-    void printstringfast(string printinloop){
-        for(int i = 0 ; printinloop[i] != '\0' ; i++){
-            cout <<  printinloop[i];
-            Sleep(1);
-        }
-    }
-
-
-    void printstringfast2(string printinloop){
-        for(int i = 0 ; printinloop[i] != '\0' ; i++){
-            cout <<  printinloop[i];
-            if(i%22 == 0){
-                Sleep(1);
+        for (char &c : user_name) {
+            if (c == '_') {
+                c = ' ';
             }
         }
-    }
-
-
-    void setColor(int color){
-        SetConsoleTextAttribute(h,color);
-    }
-
-
-    void pcNameCall(){
-        setColor(10);
-        printstring("\n@");
-        printstring(ComputerName);
-        printstring("/> ");
-        setColor(14);
-    }
-
-
-    void userNameCall(){
-        setColor(11);
-        printstring("\n@");
-        printstring(userName);
-        printstring("/> ");
-        setColor(14);
-    }
-
-
-    void loadingAnimation(){
-        // Define an array of spinner characters
-        char spinner[] = { '|', '/', '-', '\\' };
+}
     
-        // Number of spinner frames
-        int numFrames = sizeof(spinner) / sizeof(spinner[0]);
-    
-        for (int iter = 0; iter < numIterations; ++iter) {
-            for (int frame = 0; frame < numFrames; ++frame) {
-
-                cout << "\033[2J\033[H"; 
-            
-                // Print the spinner frame
-                cout << "\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tLoading";
-                for (int i = 0 ; i < iter ; i++){
-                    cout << ".";
+int Game_guess :: is_agree(){
+        // Iterate through the string and replace spaces with underscores
+        for (char &c : computer_name) {
+            if (c == ' ') {
+                c = '_';
                 }
-                cout << spinner[frame] << flush;
-            
-                // Delay before the next frame
-                this_thread::sleep_for(chrono::milliseconds(frameDelay));
-            }
         }
-    
-        // Clear the console screen after the animation
-        cout << "\033[2J\033[H"; 
-    }
-
-
-    void guessNumber(){
-        pcNameCall();
-        printstring("it`s ok ");
-        setColor(10);
-        printstring(userName);
+        pc_name_call();
+        print_style_1("it`s ok ");
+        set_color(10);
+        print_style_1(user_name);
         cout <<  endl;
         
         // Iterate through the string and replace spaces with underscores
-        for (char &c : userName) {
+        for (char &c : user_name) {
             if (c == ' ') {
                 c = '_';
                 }
@@ -246,470 +210,318 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);     // Console Text color Attribute
     
         Sleep(500);
 
-        pcNameCall();
-        printstring("Before exit, I want to paly diffrent another game with you.\n");
+        pc_name_call();
+        print_style_1("Before exit, I want to paly diffrent another game with you.\n");
         Sleep(500);
-        pcNameCall();
-        printstring("Are you want to paly with me?\n");
+        pc_name_call();
+        print_style_1("Are you want to paly with me?\n");
         Sleep(500);
-        pcNameCall();
-        printstring("Enter 'y/n' for yes/no ===> ");
-        setColor(9);
+        pc_name_call();
+        print_style_1("Enter 'y/n' for yes/no ===> ");
+        set_color(9);
+        string ask;
         cin >> ask;
 
-        if(ask[0] != 'y'){
-            return;
-        }
-        else{
-
-            srand(time(0));       // use system time to pick a randam number
-
-            // Generate a random number between 1 and 100
-            int randomNumber = rand() % 100 + 1;
-            int guess;
-            int attempts = 0;
-
-            Sleep(500);
-
-            pcNameCall();
-            setColor(14);
-            printstring("I choose a number between (1-100)\n");
-            pcNameCall();
-            printstring("guess my number.\n");
-
-            for(int i = 1 ; i ; i++) {
-
-                if(i == 3){
-                    pcNameCall();
-                    printstring("[Hint] ===> ");
-                    setColor(160);
-                    printstring(" Use \"Divide & Conquer\" Method ");
-                    setColor(7);
-                    cout <<  endl;
-                }
-
-                userNameCall();
-                if(i != 1){
-                    printstring("===> ");
-                }
-                else{
-                    printstring("Enter your guess (1-100) ===> ");
-                }
-                setColor(9);
-
-                cin  >>  guess;
-
-                cin.clear();          // Clear error state
-                cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
-                attempts++;
-
-                if (guess < 1 || guess > 100) {
-                    pcNameCall();
-                    setColor(4);
-                    printstring("Please enter a number between 1 and 100.\n");      // when input is not in range or not in integer domain
-                    i--;
-                    continue;
-                }
-
-                if (guess < randomNumber) {
-                    pcNameCall();
-                    setColor(4);
-                    printstring("Too low! Try again with (greater number) ");
-                    setColor(10);
-                    cout<<(char)24;
-                    cout<<endl;
-                } else if (guess > randomNumber) {
-                    pcNameCall();
-                    setColor(4);
-                    printstring("Too High! Try again with (lower number) ");
-                    setColor(10);
-                    cout<<(char)25;
-                    cout<<endl;
-                } else {
-                    Sleep(300);
-                    pcNameCall();
-                    setColor(5);
-                    printstring("Congratulations! You guessed the number ");
-                    cout  <<   randomNumber  <<   " in "  <<   attempts  <<   " attempts."  <<  endl;
-                    break;
-                }
-            }
-        }
-    }
-
-
-    void interFace(){
-
-        setColor(4);
-        printstring("maximize Terminal for better experience.\n\n");
-        
-        Sleep(500);
-
-        setColor(14);
-        printstring("Enter your nick name ---> ");
-        getline(cin,userName);
-        printstring("Give name to your PC ---> ");
-        getline(cin,ComputerName); 
-        cout <<  endl;
-
-        time_t now = time(0);
-        tm *ltm = localtime(&now);
-
-        int T = ltm->tm_hour;
-
-        setColor(10);
-
-        if(T <= 11){
-           printstring("Good Morning ");
-        }
-        else if(T >= 12 && T <= 14){
-           printstring("Good Afternoon ");
-        }
-        else if(T >= 15){
-           printstring("Good Evening ");
-        }
-
-        setColor(14);
-        printstring(userName);
-        cout <<  ",\n\n";
-
-        Sleep(500);
-
-        printstring("your opponent is your PC -> ");
-
-        setColor(10);
-        printstring(ComputerName);
-        cout <<  endl <<  endl;
-
-        Sleep(500);
-
-        setColor(14);
-        printstring("<------- RULE OF THE GAME ------->\n\n");
-
-        Sleep(50);
-
-        printstring("\'SNAKE\' + \'WATER\' ---> SNAKE win \n");
-        printstring("\'SNAKE\' +  \'GUN\'  ---> GUN win \n");
-        printstring("\'WATER\' + \'SNAKE\' ---> SNAKE win \n");
-        printstring("\'WATER\' +  \'GUN\'  ---> WATER win \n");
-        printstring(" \'GUN\'  + \'SNAKE\' ---> GUN win \n");
-        printstring(" \'GUN\'  + \'WATER\' ---> WATER win \n\n");
-
-        system("pause");
-    }
-
-
-    int rungame(){
-        setColor(9);
-        printstringfast("\nPress:");
-        setColor(11);
-        printstringfast(" [1]=> ");
-        setColor(14);
-        printstringfast("SANKE");
-        setColor(11);
-        printstringfast("  [2]=> ");
-        setColor(14);
-        printstringfast("WATER");
-        setColor(11);
-        printstringfast("  [3]=> ");
-        setColor(14);
-        printstringfast("GUN");
-        setColor(9);
-        printstringfast(" ==> ");
-        
-        cin  >>  user;
-        cout <<  endl;   
-
-        srand(time(0));
-        computer = (rand()/counter)%3 + 49;
-
-        setColor(11); 
-
-        if(user[0] != '1' || user[0] != '2' || user[0] != '3'){
-            if(computer[0] == '1' && user[0] == '2'){
-                printstringfast(userName);
-                cout <<  " : "; 
-                setColor(112); 
-                printstringfast(" WATER "); 
-                setColor(5); 
-                cout <<  "  " <<  (char)6 <<  "  "; 
-                setColor(11); 
-                printstringfast(ComputerName);
-                cout <<  " : "; 
-                setColor(112); 
-                Sleep(1100);
-                printstringfast(" SNAKE "); 
-                setColor(11); 
-                printstringfast(" ---> "); 
-                Sleep(200); 
-                cout <<  (char)2 <<  " ";    
-                setColor(192); 
-                cout <<  " "; 
-                printstringfast(ComputerName);
-                printstringfast(" win "); 
-                setColor(11); 
-                cout <<  endl <<  endl;              // user lose
-
-                return 0;
-            }
-            else if(computer[0] == '2' && user[0] == '3'){
-                printstringfast(userName);
-                cout <<  " : "; 
-                setColor(112); 
-                printstringfast(" GUN ");  
-                setColor(5); 
-                cout <<  "  " <<  (char)6 <<  "  "; 
-                setColor(11); 
-                printstringfast(ComputerName);
-                cout <<  " : "; 
-                setColor(112); 
-                Sleep(1100);
-                printstringfast(" WATER "); 
-                setColor(11); 
-                printstringfast(" ---> "); 
-                Sleep(200); 
-                cout <<  (char)2 <<  " ";      
-                setColor(192); 
-                printstringfast(" "); 
-                printstringfast(ComputerName);
-                printstringfast(" win "); 
-                setColor(11); 
-                cout <<  endl <<  endl;              // user lose
-
-                return 0;
-            }
-            else if(computer[0] == '3' && user[0] == '1'){
-                printstringfast(userName);
-                cout <<  " : "; 
-                setColor(112); 
-                printstringfast(" SNAKE "); 
-                setColor(5); 
-                cout <<  "  " <<  (char)6 <<  "  "; 
-                setColor(11); 
-                printstringfast(ComputerName);
-                cout <<  " : "; 
-                setColor(112); 
-                Sleep(1100);
-                printstringfast(" GUN ");  
-                setColor(11); 
-                printstringfast(" ---> "); 
-                Sleep(200); 
-                cout <<  (char)2 <<  " ";         
-                setColor(192); 
-                printstringfast(" ");
-                printstringfast(ComputerName);
-                printstringfast(" win "); 
-                setColor(11);
-                cout <<  endl <<  endl;              // user lose
-                
-                return 0;
-            }
-            else if(computer[0] == '1' && user[0] == '3'){
-                printstringfast(userName);
-                cout <<  " : "; 
-                setColor(112); 
-                printstringfast(" GUN ");  
-                setColor(5); 
-                cout <<  "  " <<  (char)6 <<  "  "; 
-                setColor(11); 
-                printstringfast(ComputerName);
-                cout <<  " : "; 
-                setColor(112); 
-                Sleep(1100);
-                printstringfast(" SNAKE "); 
-                setColor(11); 
-                printstringfast(" ---> "); 
-                Sleep(200); 
-                cout <<  (char)2 <<  " ";         
-                setColor(160); 
-                printstringfast(" ");
-                printstringfast(userName);
-                printstringfast(" win "); 
-                setColor(11); 
-                cout <<  endl <<  endl;               // user win
-
-                score++;
-
-                return 1;
-            }
-            else if(computer[0] == '2' && user[0] == '1'){
-                printstringfast(userName);
-                cout <<  " : "; 
-                setColor(112); 
-                printstringfast(" SNAKE "); 
-                setColor(5); 
-                cout <<  "  " <<  (char)6 <<  "  "; 
-                setColor(11); 
-                printstringfast(ComputerName);
-                cout <<  " : "; 
-                setColor(112); 
-                Sleep(1100);
-                printstringfast(" WATER "); 
-                setColor(11); 
-                printstringfast(" ---> "); 
-                Sleep(200); 
-                cout <<  (char)2 <<  " ";        
-                setColor(160); 
-                printstringfast(" ");
-                printstringfast(userName);
-                printstringfast(" win "); 
-                setColor(11); 
-                cout <<  endl <<  endl;             // user win
-
-                score++;
-
-                return 1;
-            }
-            else if(computer[0] == '3' && user[0] == '2'){
-                printstringfast(userName);
-                cout <<  " : "; 
-                setColor(112); 
-                printstringfast(" WATER "); 
-                setColor(5); 
-                cout <<  "  " <<  (char)6 <<  "  "; 
-                setColor(11); 
-                printstringfast(ComputerName);
-                cout <<  " : "; 
-                setColor(112); 
-                Sleep(1100);
-                printstringfast(" GUN ");  
-                setColor(11); 
-                printstringfast(" ---> "); 
-                Sleep(200); 
-                cout <<  (char)2 <<  " ";         
-                setColor(160); 
-                printstringfast(" ");
-                printstringfast(userName);
-                printstringfast(" win "); 
-                setColor(11); 
-                cout <<  endl <<  endl;             // user win
-
-                score++;
-
-                return 1;
-            }
-            else if(computer[0] == '1' &&  user[0] == '1'){
-                printstringfast(userName);
-                cout <<  " : "; 
-                setColor(112); 
-                printstringfast(" SNAKE "); 
-                setColor(5); 
-                cout <<  "  " <<  (char)6 <<  "  "; 
-                setColor(11); 
-                printstringfast(ComputerName);
-                cout <<  " : "; 
-                setColor(112); 
-                Sleep(1100);
-                printstringfast(" SNAKE "); 
-                setColor(11); 
-                printstringfast(" ---> "); 
-                Sleep(200); 
-                cout <<  (char)2 <<  " ";         
-                setColor(224); 
-                printstringfast(" Match Drawn "); 
-                setColor(11); 
-                cout <<  endl <<  endl;              // match drawn
-
-                counter++;
-
-                return 2;
-            }
-            else if(computer[0] == '2' && user[0] == '2'){
-                printstringfast(userName);
-                cout <<  " : "; 
-                setColor(112); 
-                printstringfast(" WATER "); 
-                setColor(5); 
-                cout <<  "  " <<  (char)6 <<  "  "; 
-                setColor(11); 
-                printstringfast(ComputerName);
-                cout <<  " : "; 
-                setColor(112); 
-                Sleep(1100);
-                printstringfast(" WATER "); 
-                setColor(11); 
-                printstringfast(" ---> "); 
-                Sleep(200); 
-                cout <<  (char)2 <<  " ";           
-                setColor(224); 
-                printstringfast(" Match Drawn "); 
-                setColor(11); 
-                cout <<  endl <<  endl;           // match drawn
-
-                counter++;
-
-                return 2;
-            }
-            else if(computer[0] == '3' && user[0] == '3'){
-                printstringfast(userName);
-                cout <<  " : "; 
-                setColor(112); 
-                printstringfast(" GUN ");  
-                setColor(5); 
-                cout <<  "  " <<  (char)6 <<  "  "; 
-                setColor(11); 
-                printstringfast(ComputerName);
-                cout <<  " : "; 
-                setColor(112); 
-                Sleep(1100);
-                printstringfast(" GUN ");  
-                setColor(11); 
-                printstringfast(" ---> "); 
-                Sleep(200); 
-                cout <<  (char)2 <<  " ";         
-                setColor(224); 
-                printstringfast(" Match Drawn "); 
-                setColor(11); 
-                cout <<  endl <<  endl;           // match drawn
-
-                counter++;
-
-                return 2;
-            }
-            else{
-                setColor(4);
-                printstringfast("Invalid input\n\n");
-                setColor(11);
-
-                return 9;
-            }
+        if(ask[0] == 'y' || ask[0] == 'Y'){
+            return 1;
         }
         return 0;
-    }
+}
 
+void Game_swg :: set_name(){
+    set_color(4);
+    print_style_1("maximize Terminal for better experience.\n\n");
+    Sleep(1000);
+    set_color(14);
+    print_style_1("Enter your nick name ---> ");
+    getline(cin,user_name);
+    print_style_1("Give name to your PC ---> ");
+    getline(cin,computer_name); 
+    cout <<  endl;
+}
 
-    //welcome
-    void intro(){
-        setColor(5);
-        printstringfast2("\n\n\t\t\t********************************************************************************\n");
-        printstringfast2("\t\t\t* ");
-        setColor(7); 
-        printstringfast2("##          ## ######## ##       ######## ########## ####      #### ########"); 
-        setColor(5);
-        printstringfast2(" *\n");
-        printstringfast2("\t\t\t* ");
-        setColor(7); 
-        printstringfast2("##   ####   ## ##       ##       ##       ##      ## ## ##    ## ## ##      "); 
-        setColor(5);
-        printstringfast2(" *\n");
-        printstringfast2("\t\t\t* ");
-        setColor(7); 
-        printstringfast2("##  ##  ##  ## ######## ##       ##       ##      ## ##  ##  ##  ## ########"); 
-        setColor(5);
-        printstringfast2(" *\n");
-        printstringfast2("\t\t\t* ");
-        setColor(7); 
-        printstringfast2("## ##    ## ## ##       ##       ##       ##      ## ##   ####   ## ##      "); 
-        setColor(5);
-        printstringfast2(" *\n");
-        printstringfast2("\t\t\t* ");
-        setColor(7); 
-        printstringfast2("####      #### ######## ######## ######## ########## ##          ## ########"); 
-        setColor(5);
-        printstringfast2(" *\n");
-        printstringfast2("\t\t\t********************* TO THE");
-        setColor(1);
-        printstringfast2(" SNAKE, WATER, GUN");
-        setColor(5);
-        printstringfast2(" [GAME] **************************\n\n");
+void Game_swg :: greet(){
+    time_t now = time(0);
+    tm *ltm = localtime(&now);
+    int T = ltm->tm_hour;
+    set_color(10);
+    if(T <= 11){
+       print_style_1("Good Morning ");
     }
+    else if(T >= 12 && T <= 14){
+       print_style_1("Good Afternoon ");
+    }
+    else if(T >= 15){
+       print_style_1("Good Evening ");
+    }
+    set_color(14);
+    print_style_1(user_name);
+    cout <<  ",\n\n";
+    Sleep(500);
+    print_style_1("your opponent is your PC -> ");
+    set_color(10);
+    print_style_1(computer_name);
+    cout <<  endl <<  endl;
+    Sleep(500);
+}
+void Game_swg :: rules(){
+    set_color(14);
+    print_style_1("<------- RULE OF THE GAME ------->\n\n");
+    Sleep(50);
+    print_style_1("\'SNAKE\' + \'WATER\' ---> SNAKE win \n");
+    print_style_1("\'SNAKE\' +  \'GUN\'  ---> GUN win \n");
+    print_style_1("\'WATER\' + \'SNAKE\' ---> SNAKE win \n");
+    print_style_1("\'WATER\' +  \'GUN\'  ---> WATER win \n");
+    print_style_1(" \'GUN\'  + \'SNAKE\' ---> GUN win \n");
+    print_style_1(" \'GUN\'  + \'WATER\' ---> WATER win \n\n");
+    system("pause");
+
+}
+void Game_swg :: welcome_animation(){
+    set_color(5);
+    print_style_2("\n\n\t\t\t********************************************************************************\n");
+    print_style_2("\t\t\t* ");
+    set_color(7); 
+    print_style_2("##          ## ######## ##       ######## ########## ####      #### ########"); 
+    set_color(5);
+    print_style_2(" *\n");
+    print_style_2("\t\t\t* ");
+    set_color(7); 
+    print_style_2("##   ####   ## ##       ##       ##       ##      ## ## ##    ## ## ##      "); 
+    set_color(5);
+    print_style_2(" *\n");
+    print_style_2("\t\t\t* ");
+    set_color(7); 
+    print_style_2("##  ##  ##  ## ######## ##       ##       ##      ## ##  ##  ##  ## ########"); 
+    set_color(5);
+    print_style_2(" *\n");
+    print_style_2("\t\t\t* ");
+    set_color(7); 
+    print_style_2("## ##    ## ## ##       ##       ##       ##      ## ##   ####   ## ##      "); 
+    set_color(5);
+    print_style_2(" *\n");
+    print_style_2("\t\t\t* ");
+    set_color(7); 
+    print_style_2("####      #### ######## ######## ######## ########## ##          ## ########"); 
+    set_color(5);
+    print_style_2(" *\n");
+    print_style_2("\t\t\t********************* TO THE");
+    set_color(1);
+    print_style_2(" SNAKE, WATER, GUN");
+    set_color(5);
+    print_style_2(" [GAME] **************************\n\n");
+}
+void Game_swg :: show_remaing_time(){
+    set_color(8);
+    if(counter < 10){
+        print_style_1("You have remaining --> ");         // show remaining turns
+        cout <<  counter;
+        if(counter != 1){
+            print_style_1(" times");
+        }
+        else{
+            print_style_1(" time");
+        }
+    }
+}
+void Game_swg :: get_Game_swg_input(){
+    set_color(9);
+    print_style_1("\nPress:");
+    set_color(11);
+    print_style_1(" [1]=> ");
+    set_color(14);
+    print_style_1("SANKE");
+    set_color(11);
+    print_style_1("  [2]=> ");
+    set_color(14);
+    print_style_1("WATER");
+    set_color(11);
+    print_style_1("  [3]=> ");
+    set_color(14);
+    print_style_1("GUN");
+    set_color(9);
+    print_style_1(" ==> ");
+        
+    cin  >>  user;
+    cout <<  endl; 
+
+    cin.clear();          // Clear error state
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');   
+
+}
+void Game_swg :: game_body(string A , string B, string C, int color){
+    set_color(11);
+    print_style_1(user_name);
+    cout <<  " : "; 
+    set_color(112); 
+    print_style_1(A); 
+    set_color(5); 
+    cout <<  "  " <<  (char)6 <<  "  "; 
+    set_color(11); 
+    print_style_1(computer_name);
+    cout <<  " : "; 
+    set_color(112); 
+    Sleep(1100);
+    print_style_1(B); 
+    set_color(11); 
+    print_style_1(" ---> "); 
+    Sleep(200); 
+    cout <<  (char)2 <<  " ";    
+    set_color(color);             
+    if(A != B ){
+    cout <<  " "; 
+    print_style_1(C);
+    print_style_1(" win "); 
+    counter--;
+    }
+    else{
+    print_style_1(" Match Drawn "); 
+    } 
+    set_color(7);
+    Sleep(500);
+    cout << endl;
+    if(counter != 0){
+        underline();
+    }
+    else{
+        set_color(5);
+        cout << endl;
+        print_style_2("-------------------------------Game-Finished------------------------------",2);
+        cout << endl;
+    }
+}
+void Game_swg :: run_game(){
+    computer = (rand() + counter)%3 + 1;
+
+    show_remaing_time();
+    get_Game_swg_input();
+
+    set_color(11); 
+    if(user != 1 || user != 2 || user != 3){
+        if(computer == 1 && user == 2){
+            game_body(" WATER ", " SNAKE ", computer_name, 192);         // user lose
+        }
+        else if(computer == 2 && user == 3){
+            game_body(" GUN ", " WATER ", computer_name,  192);           // user lose    
+        }
+        else if(computer == 3 && user == 1){
+            game_body(" SNAKE ", " GUN ", computer_name, 192);            // user lose                 
+        }
+        else if(computer == 1 && user == 3){
+            game_body(" GUN ", " SNAKE ", user_name, 160);              // user win      
+            score++;
+        }
+        else if(computer == 2 && user == 1){
+            game_body(" SNAKE ", " WATER ", user_name, 160);            // user win      
+            score++;
+        }
+        else if(computer == 3 && user == 2){
+            game_body(" WATER ", " GUN ", user_name, 160);              // user win          
+            score++;
+        }
+        else if(computer == 1 &&  user == 1){
+            game_body(" SNAKE ", " SNAKE ", " ", 224);             // match drawn
+        }
+        else if(computer == 2 && user == 2){
+            game_body(" WATER ",  " WATER ", " ", 224);             // match drawn
+        }
+        else if(computer == 3 && user == 3){
+            game_body(" GUN ", " GUN ", " ", 224);                  // match drawn
+        }
+        else{
+            set_color(4);
+            print_style_1("Invalid input");             // invalid input
+            underline();
+        }
+    }
+}
+void Game_swg :: thanks(){
+    set_color(10);
+    print_style_1("\n\n@ohm_vishwa/> ");
+    set_color(14);
+    print_style_1("Thanks ");
+    set_color(12);
+    cout <<  (char)3 <<  " ";      // print heart symboll
+    set_color(10);
+    print_style_1(user_name);
+    set_color(14);
+    print_style_1(" for playing.");
+    set_color(7);
+    Sleep(5000);   
+}
+void Game_swg :: your_score(){
+    set_color(11);
+    print_style_1("your score is ");
+    cout << score;
+    print_style_1(" out of 10");
+    underline();
+}
+void Game_swg :: ask(){
+    cout << endl;
+    set_color(11);
+    print_style_1("Are you want to paly again?\n");
+    print_style_1("Enter 'y/n' for yes/no ===> ");
+    string ask;
+    set_color(1);
+    getline(cin,ask);
+    if(ask[0] == 'y' || ask[0] == 'Y'){
+        counter = 10;
+    }
+    cout << endl;
+}
+
+void print_style_1(string printinloop){
+    for(int i = 0 ; printinloop[i] != '\0' ; i++){
+        cout <<  printinloop[i];
+        Sleep(15);
+    }
+}
+void print_style_2(string printinloop){
+    for(int i = 0 ; printinloop[i] != '\0' ; i++){
+        cout <<  printinloop[i];
+        if(i%22 == 0){
+            Sleep(1);
+        }
+    }
+}
+void print_style_2(string printinloop, int value){
+    for(int i = 0 ; printinloop[i] != '\0' ; i++){
+        cout <<  printinloop[i];
+        if(i%value == 0){
+            Sleep(1);
+        }
+    }
+}
+void set_color(int color){
+    SetConsoleTextAttribute(h,color);
+}
+void loading_animation(){
+     char spinner[] = { '|', '/', '-', '\\' };
+
+    int numFrames = sizeof(spinner) / sizeof(spinner[0]);
+
+    for (int iter = 0; iter < numIterations; ++iter) {
+        for (int frame = 0; frame < numFrames; ++frame) {
+            system("cls");  
+        
+            cout << "\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tLoading";
+            for (int i = 0 ; i < iter ; i++){
+                cout << ".";
+            }
+            cout << spinner[frame] << flush;
+        
+            this_thread::sleep_for(chrono::milliseconds(frameDelay));
+        }
+    }
+    system("cls");  
+    Sleep(1000);
+}
+void underline(){
+    set_color(5);
+    cout << endl;
+    for (int i = 0 ; i <= 36 ; i++) {
+        cout << "--" ;
+        Sleep(1);
+    }
+    cout << endl; 
+}
