@@ -14,7 +14,8 @@ Overall, it's a fun and interactive program that combines two different games an
 
 I hope you will enjoy my small piece of code. @ohm 
 
-[visit](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
+[githut](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
+
 [open in vs code editor](https://github1s.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
 
 [youtube](https://www.youtube.com/@ohms_code)
