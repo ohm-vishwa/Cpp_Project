@@ -143,7 +143,7 @@ void Game_guess :: run_guess_game(){
         if (guess < 1 || guess > 100) {
             pc_name_call();
             set_color(4);
-            print_style_1("Please enter a number between 1 and 100.\n");      // when input is not in range or not in integer domain
+            print_style_1("Please enter a number between 1 and 100.\n");   
             i--;
             continue;
         }
@@ -151,14 +151,14 @@ void Game_guess :: run_guess_game(){
         if (guess < random_number) {
             pc_name_call();
             set_color(4);
-            print_style_1("Too low! Try again with (greater number) ");
+            print_style_1("Too low! Try again with greater number ");
             set_color(10);
             cout<<(char)24;
             cout<<endl;
         } else if (guess > random_number) {
             pc_name_call();
             set_color(4);
-            print_style_1("Too High! Try again with (lower number) ");
+            print_style_1("Too High! Try again with lower number ");
             set_color(10);
             cout<<(char)25;
             cout<<endl;
@@ -201,7 +201,7 @@ int Game_guess :: is_agree(){
         Sleep(500);
 
         pc_name_call();
-        print_style_1("Before exit, I want to paly diffrent another game with you.\n");
+        print_style_1("Before exit, I want to paly different another game with you.\n");
         Sleep(500);
         pc_name_call();
         print_style_1("Are you want to paly with me?\n");
@@ -382,7 +382,7 @@ void Game_swg :: game_body(string A , string B, string C, int color){
     }
 }
 void Game_swg :: run_game(){
-    computer = (rand() + counter)%3 + 1;
+    computer = ( rand() * counter + 7 )%3 + 1;
 
     show_remaing_time();
     get_Game_swg_input();
