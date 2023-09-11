@@ -50,8 +50,7 @@ class Game_guess : public Game_swg {
 void set_color(int);             
 void loading_animation();        
 void print_style_1(string);
-void print_style_2(string);      
-void print_style_2(string, int);      
+void print_style_2(string);         
 void underline();
 
 int main(){
@@ -376,7 +375,7 @@ void Game_swg :: game_body(string A , string B, string C, int color){
     else{
         set_color(5);
         cout << endl;
-        print_style_2("-------------------------------Game-Finished------------------------------",2);
+        print_style_2("-------------------------------Game-Finished------------------------------");
         cout << endl;
     }
 }
@@ -469,7 +468,7 @@ void print_style_1(string printinloop){
 void print_style_2(string printinloop){
     for(int i = 0 ; printinloop[i] != '\0' ; i++){
         cout <<  printinloop[i];
-        if(i%22 == 0){
+        if(i%2 == 0){
             Sleep(1);
         }
     }
