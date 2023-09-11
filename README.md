@@ -19,6 +19,6 @@ Overall, it's a fun and interactive program that combines two different games an
 
 ### ===> [youtube](https://www.youtube.com/@ohms_code)
 
-<img width="960" alt="Screenshot_20230525_120044" src="https://github.com/ohmDTO/project/assets/113088687/f21c650a-bd88-4f18-81d6-bd1eb6b52768">
+<img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/XDT0573/Screenshot-20230911-070557.png">
 
 ### I hope you will enjoy my small piece of code. @ohm_vishwa
