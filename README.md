@@ -1,4 +1,4 @@
-This is a game program based on `Snake-Water-Gun` similar to the the `Rock-Paper-Scissor.`
+This is a game program based on `Snake-Water-Gun` similar to the `Rock-Paper-Scissor.`
 
 **Game_swg Class:** This class represents the _Snake-Water-Gun game_. It includes methods for various aspects of the game, such as the _welcome animation_, _setting player names_, _playing rules_, _run game_, and _handling user input_.
 
