@@ -143,7 +143,7 @@ void Game_guess :: run_guess_game(){
         if (guess < 1 || guess > 100) {
             pc_name_call();
             set_color(4);
-            print_style_1("Please enter a number between 1 and 100.\n");   
+            print_style_1("Please enter a number between 1 and 100.\n");      // when input is not in range or not in integer domain
             i--;
             continue;
         }
@@ -382,7 +382,7 @@ void Game_swg :: game_body(string A , string B, string C, int color){
     }
 }
 void Game_swg :: run_game(){
-    computer = ( rand() * counter + 7 )%3 + 1;
+    computer = (rand())%3 + 1;
 
     show_remaing_time();
     get_Game_swg_input();
