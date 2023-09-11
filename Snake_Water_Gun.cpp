@@ -67,6 +67,7 @@ int main(){
     loading_animation();
 
     game1_obj.welcome_animation();
+    Sleep(900);
     
     do{
         while(game1_obj.counter != 0){
