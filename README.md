@@ -13,8 +13,6 @@ This is a game program based on `Snake-Water-Gun` similar to the `Rock-Paper-Sci
 Overall, it's a fun and interactive program that combines two different games and _includes colorful animations_ and text. However, it's worth noting that it relies on _Windows-specific features_ and may not work as intended on non-Windows systems. Additionally, since it uses a console-based interface, it's best run in a `command prompt or terminal`.
 
 
-# I hope you will enjoy my small piece of code. @ohm_vishwa
-
 [github: source code](https://github.com/ohmDTO/project)
 
 [open in vs code editor](https://github1s.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
@@ -23,4 +21,4 @@ Overall, it's a fun and interactive program that combines two different games an
 
 <img width="960" alt="Screenshot_20230525_120044" src="https://github.com/ohmDTO/project/assets/113088687/f21c650a-bd88-4f18-81d6-bd1eb6b52768">
 
-
+### I hope you will enjoy my small piece of code. @ohm_vishwa
