@@ -4,7 +4,7 @@ This is a game program based on `Snake-Water-Gun` similar to the `Rock-Paper-Sci
 
 **Game_guess Class:** It includes methods for `generating a random number`, allowing the user to `guess the number`.
 
-**Main Function:** The main function _initializes and runs the Snake-Water-Gun game_, and then it _asks the user if they want to play again._ The program continues until the *user guess correct number*.
+**Main Function:** The main function _initializes and runs the Snake-Water-Gun game_, and then it _asks the user if they want to play again._ run guess number game function until the *user guess correct number*.
 
 **Helper Functions:** There are several helper functions for `setting text color`, `loading animations`, and `printing string with various styles`.
 
