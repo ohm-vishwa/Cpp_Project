@@ -1,22 +1,8 @@
-/*
-This is a game programme based on Snake-Water-Gun similar to the the Rock-Paper-Scissor
-also another guess number game included in this programme.
-
-playable in code editor terminal or you can compile and run executable file any where on your desktop.
-For vscode editor look edit your link above, add '1s' after github as --> github1s.com
-
-compile only in offline environment.
-don`t try to execute on online c++ compiler, online compiler can throw error because online compiler
-doesn`t have <windows.h> library in it`s directory.
-
-I hope you will enjoy my small piece of code. @ohm 
-*/
-
 #include <bits/stdc++.h>
 #include <windows.h>
 
-#define frameDelay 60   // loading animation part
-#define numIterations 10 
+#define frame_delay 60   // loading animation part
+#define num_iterations 10 
 
 using namespace std;
 HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE); 
@@ -70,6 +56,9 @@ void underline();
 
 int main(){
     Game_swg game1_obj;
+
+    system("cls"); 
+    Sleep(700);
 
     game1_obj.set_name();
     game1_obj.greet();
@@ -500,17 +489,17 @@ void loading_animation(){
 
     int numFrames = sizeof(spinner) / sizeof(spinner[0]);
 
-    for (int iter = 0; iter < numIterations; ++iter) {
+    for (int iter = 0; iter < num_iterations; ++iter) {
         for (int frame = 0; frame < numFrames; ++frame) {
             system("cls");  
         
-            cout << "\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tLoading";
+            cout << "\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\tLoading";
             for (int i = 0 ; i < iter ; i++){
                 cout << ".";
             }
             cout << spinner[frame] << flush;
         
-            this_thread::sleep_for(chrono::milliseconds(frameDelay));
+            this_thread::sleep_for(chrono::milliseconds(frame_delay));
         }
     }
     system("cls");  
