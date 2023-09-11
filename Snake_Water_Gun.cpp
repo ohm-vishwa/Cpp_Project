@@ -93,6 +93,7 @@ int main(){
     return 0;
 }
 
+
 /* <-------------------------------------------------------------->*/
 void Game_guess :: pc_name_call(){
     set_color(10);
@@ -361,6 +362,7 @@ void Game_swg :: game_body(string A , string B, string C, int color){
     cout <<  " "; 
     print_style_1(C);
     print_style_1(" win "); 
+        
     counter--;
     }
     else{
@@ -450,7 +452,9 @@ void Game_swg :: ask(){
     set_color(11);
     print_style_1("Are you want to paly again?\n");
     print_style_1("Enter 'y/n' for yes/no ===> ");
+    
     string ask;
+    
     set_color(1);
     getline(cin,ask);
     if(ask[0] == 'y' || ask[0] == 'Y'){
@@ -469,14 +473,6 @@ void print_style_2(string printinloop){
     for(int i = 0 ; printinloop[i] != '\0' ; i++){
         cout <<  printinloop[i];
         if(i%2 == 0){
-            Sleep(1);
-        }
-    }
-}
-void print_style_2(string printinloop, int value){
-    for(int i = 0 ; printinloop[i] != '\0' ; i++){
-        cout <<  printinloop[i];
-        if(i%value == 0){
             Sleep(1);
         }
     }
