@@ -12,17 +12,12 @@ This is a game program based on `Snake-Water-Gun` similar to the `Rock-Paper-Sci
 
 Overall, it's a fun and interactive program that combines two different games and _includes colorful animations_ and text. However, it's worth noting that it relies on _Windows-specific features_ and may not work as intended on non-Windows systems. Additionally, since it uses a console-based interface, it's best run in a `command prompt or terminal`.
 
-
-### ===> [github: source code](https://github.com/ohmDTO/project)
-
-### ===> [open in vs code editor](https://github1s.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
-
-### ===> [youtube](https://www.youtube.com/@ohms_code)
-
+### ==> [github: source code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
+### ==> [open in vs code editor](https://github1s.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
+### ==> [youtube](https://www.youtube.com/@ohms_code)
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/zs9qcqX/Screenshot-20230911-083741.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/XDT0573/Screenshot-20230911-070557.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/JvHHVXB/Screenshot-20230911-084159.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/K6kd5k1/Screenshot-20230911-084411.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/1Km2kRt/Screenshot-20230911-084422.png">
-
 ### I hope you will enjoy my small piece of code. @ohm_vishwa
