@@ -1,4 +1,4 @@
-This is a game program based on `Snake-Water-Gun` similar to the `Rock-Paper-Scissor.`
+This is a mini project (c++) based on `Snake-Water-Gun` Game similar to the `Rock-Paper-Scissor` Game.
 
 **Game_swg Class:** This class represents the _Snake-Water-Gun game_. It includes methods for various aspects of the game, such as the _welcome animation_, _setting player names_, _playing rules_, _run game_, and _handling user input_.
 
@@ -19,5 +19,5 @@ Overall, it's a fun and interactive program that combines two different games an
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/K6kd5k1/Screenshot-20230911-084411.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/1Km2kRt/Screenshot-20230911-084422.png">
 
-### I hope you will enjoy my small piece of code. @ohm_vishwa
-### ==> [Youtube](https://www.youtube.com/@ohms_code)
+### I hope you will enjoy my small piece of code. @ohm_kumar
+### ⚆_⚆ [Youtube](https://www.youtube.com/@ohms_code)
