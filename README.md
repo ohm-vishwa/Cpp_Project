@@ -1,6 +1,6 @@
 This is a mini project (c++) based on `Snake-Water-Gun` Game similar to the `Rock-Paper-Scissor` Game.
 
-The idea behind this game is any of the <sup>3</sup>C<sub>2</sub> combination choosen by `user` and `program` gives result, either one of them will be the `winner` by some logic. 
+The idea behind this game is, any of the <sup>3</sup>C<sub>2</sub> combination choosen by `user` and `program` gives result, either one of them will be the `winner` by some logic. 
 
 **Game_swg Class:** This class represents the _Snake-Water-Gun game_. It includes methods for various aspects of the game, such as the _welcome animation_, _setting player names_, _playing rules_, _run game_, and _handling user input_.
 
