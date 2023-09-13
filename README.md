@@ -12,7 +12,7 @@ This is a mini project (c++) based on `Snake-Water-Gun` Game similar to the `Roc
 
 Overall, it's a fun and interactive program that combines two different games and _includes colorful animations_ and text. However, it's worth noting that it relies on _Windows-specific features_ and may not work on non-Windows systems. since, it uses a console-based interface, it's best run in a `command prompt or terminal`.
 
-### ==> [Github: source code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
+### =}> [Github: source code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/zs9qcqX/Screenshot-20230911-083741.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/XDT0573/Screenshot-20230911-070557.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/JvHHVXB/Screenshot-20230911-084159.png">
@@ -20,4 +20,4 @@ Overall, it's a fun and interactive program that combines two different games an
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/1Km2kRt/Screenshot-20230911-084422.png">
 
 ### I hope you will enjoy my small piece of code. @ohm_kumar
-### ⚆_⚆ [Youtube](https://www.youtube.com/@ohms_code)
+### =}> [Youtube](https://www.youtube.com/@ohms_code)
