@@ -10,10 +10,9 @@ This is a game program based on `Snake-Water-Gun` similar to the `Rock-Paper-Sci
 
 **Windows-Specific Functions:** The program uses the `Windows API (windows.h)` to manipulate `console text colors`. This program is *designed* to run on `Windows systems`.
 
-Overall, it's a fun and interactive program that combines two different games and _includes colorful animations_ and text. However, it's worth noting that it relies on _Windows-specific features_ and may not work on non-Windows systems. since it uses a console-based interface, it's best run in a `command prompt or terminal`.
+Overall, it's a fun and interactive program that combines two different games and _includes colorful animations_ and text. However, it's worth noting that it relies on _Windows-specific features_ and may not work on non-Windows systems. since, it uses a console-based interface, it's best run in a `command prompt or terminal`.
 
 ### ==> [Github: source code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
-### ==> [open in vs code editor](https://github1s.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/zs9qcqX/Screenshot-20230911-083741.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/XDT0573/Screenshot-20230911-070557.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/JvHHVXB/Screenshot-20230911-084159.png">
