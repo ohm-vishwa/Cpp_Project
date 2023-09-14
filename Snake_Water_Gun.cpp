@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 #include <windows.h>
-
-#define frame_delay 60   // loading animation part
+#define frame_delay 60
 #define num_iterations 10 
 
 using namespace std;
@@ -17,7 +16,7 @@ class Game_swg {
         int score = 0;
 
     public :  
-        int counter = 10; 
+        int counter = 5; 
 
         friend class Game_guess;
 
@@ -50,7 +49,7 @@ class Game_guess : public Game_swg {
 void set_color(int);             
 void loading_animation();        
 void print_style_1(string);
-void print_style_2(string);         
+void print_style_2(string);      
 void underline();
 
 int main(){
@@ -198,14 +197,12 @@ int Game_guess :: is_agree(){
                 }
         }
     
-        Sleep(500);
+        Sleep(700);
 
         pc_name_call();
         print_style_1("Before exit, I want to paly different another game with you.\n");
-        Sleep(500);
         pc_name_call();
         print_style_1("Are you want to paly with me?\n");
-        Sleep(500);
         pc_name_call();
         print_style_1("Enter 'y/n' for yes/no ===> ");
         set_color(9);
@@ -223,9 +220,12 @@ void Game_swg :: set_name(){
     print_style_1("maximize Terminal for better experience.\n\n");
     Sleep(1000);
     set_color(14);
-    print_style_1("Enter your nick name ---> ");
+    print_style_1("Enter your nick name ===> ");
+    set_color(11);
     getline(cin,user_name);
-    print_style_1("Give name to your PC ---> ");
+    set_color(14);
+    print_style_1("Give name to your PC ===> ");
+    set_color(11);
     getline(cin,computer_name); 
     cout <<  endl;
 }
@@ -248,22 +248,28 @@ void Game_swg :: greet(){
     print_style_1(user_name);
     cout <<  ",\n\n";
     Sleep(500);
-    print_style_1("your opponent is your PC -> ");
-    set_color(10);
+    print_style_1("your opponent is your PC ===> ");
+    set_color(11);
     print_style_1(computer_name);
     cout <<  endl <<  endl;
     Sleep(500);
 }
 void Game_swg :: rules(){
+    set_color(4);
+    print_style_1("\n<{-----{RULES OF THE GAME}-----}>\n\n");
+    Sleep(100);
+    set_color(10);
+    print_style_1("SNAKE * WATER ====> SNAKE win \n");
+    print_style_1("SNAKE *  GUN  ====> GUN win \n");
+    print_style_1("WATER * SNAKE ====> SNAKE win \n");
+    print_style_1("WATER *  GUN  ====> WATER win \n");
+    print_style_1(" GUN  * SNAKE ====> GUN win \n");
+    print_style_1(" GUN  * WATER ====> WATER win \n\n");
     set_color(14);
-    print_style_1("<------- RULE OF THE GAME ------->\n\n");
-    Sleep(50);
-    print_style_1("\'SNAKE\' + \'WATER\' ---> SNAKE win \n");
-    print_style_1("\'SNAKE\' +  \'GUN\'  ---> GUN win \n");
-    print_style_1("\'WATER\' + \'SNAKE\' ---> SNAKE win \n");
-    print_style_1("\'WATER\' +  \'GUN\'  ---> WATER win \n");
-    print_style_1(" \'GUN\'  + \'SNAKE\' ---> GUN win \n");
-    print_style_1(" \'GUN\'  + \'WATER\' ---> WATER win \n\n");
+    print_style_1("SNAKE * SNAKE ====> Match Drawn\n");
+    print_style_1("WATER * WATER ====> Match Drawn\n");
+    print_style_1(" GUN  *  GUN  ====> Match Drawn\n\n");
+    set_color(7);
     system("pause");
 
 }
@@ -303,15 +309,18 @@ void Game_swg :: welcome_animation(){
 }
 void Game_swg :: show_remaing_time(){
     set_color(8);
-    if(counter < 10){
-        print_style_1("You have remaining --> ");         // show remaining turns
-        cout <<  counter;
-        if(counter != 1){
-            print_style_1(" times");
-        }
-        else{
-            print_style_1(" time");
-        }
+    if (counter == 5){
+        print_style_1("You have ===> ");
+    }
+    else{
+        print_style_1("You have remaining ===> ");
+    }
+    cout <<  counter;
+    if(counter != 1){
+        print_style_1(" turns");
+    }
+    else{
+        print_style_1(" trun");
     }
 }
 void Game_swg :: get_Game_swg_input(){
@@ -330,13 +339,14 @@ void Game_swg :: get_Game_swg_input(){
     set_color(14);
     print_style_1("GUN");
     set_color(9);
-    print_style_1(" ==> ");
+    print_style_1(" ===> ");
         
     cin  >>  user;
     cout <<  endl; 
 
     cin.clear();          // Clear error state
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');   
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    fflush(stdin);   
 
 }
 void Game_swg :: game_body(string A , string B, string C, int color){
@@ -353,10 +363,9 @@ void Game_swg :: game_body(string A , string B, string C, int color){
     set_color(112); 
     Sleep(1100);
     print_style_1(B); 
-    set_color(11); 
-    print_style_1(" ---> "); 
-    Sleep(200); 
-    cout <<  (char)2 <<  " ";    
+    set_color(5); 
+    print_style_1(" ===}> "); 
+    Sleep(200);   
     set_color(color);             
     if(A != B ){
     cout <<  " "; 
@@ -377,7 +386,7 @@ void Game_swg :: game_body(string A , string B, string C, int color){
     else{
         set_color(5);
         cout << endl;
-        print_style_2("-------------------------------Game-Finished------------------------------");
+        print_style_1("-------------------------------Game-Finished------------------------------");
         cout << endl;
     }
 }
@@ -444,7 +453,7 @@ void Game_swg :: your_score(){
     set_color(11);
     print_style_1("your score is ");
     cout << score;
-    print_style_1(" out of 10");
+    print_style_1(" out of 5");
     underline();
 }
 void Game_swg :: ask(){
@@ -454,7 +463,7 @@ void Game_swg :: ask(){
     print_style_1("Enter 'y/n' for yes/no ===> ");
     
     string ask;
-    
+     
     set_color(1);
     getline(cin,ask);
     if(ask[0] == 'y' || ask[0] == 'Y'){
@@ -466,13 +475,13 @@ void Game_swg :: ask(){
 void print_style_1(string printinloop){
     for(int i = 0 ; printinloop[i] != '\0' ; i++){
         cout <<  printinloop[i];
-        Sleep(15);
+        Sleep(12);
     }
 }
 void print_style_2(string printinloop){
     for(int i = 0 ; printinloop[i] != '\0' ; i++){
         cout <<  printinloop[i];
-        if(i%2 == 0){
+        if(i%22 == 0){
             Sleep(1);
         }
     }
@@ -498,7 +507,7 @@ void loading_animation(){
             this_thread::sleep_for(chrono::milliseconds(frame_delay));
         }
     }
-    system("cls");  
+    system("cls"); 
     Sleep(1000);
 }
 void underline(){
