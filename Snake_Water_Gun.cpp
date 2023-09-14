@@ -467,7 +467,7 @@ void Game_swg :: ask(){
     set_color(1);
     getline(cin,ask);
     if(ask[0] == 'y' || ask[0] == 'Y'){
-        counter = 10;
+        counter = 5;
     }
     cout << endl;
 }
