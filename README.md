@@ -27,4 +27,4 @@ Overall, it's a fun and interactive program that combines two different games an
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/3CBLWfb/Screenshot-20230914-055726.png">
 
 ### I hope you will enjoy my small piece of code. @ohm_kumar
-### =}> [Youtube](https://www.youtube.com/@ohms_code)
+### =}> [Youtube](https://youtu.be/R3cQruUiRLE?si=FOArVbch22hxH5xn)
