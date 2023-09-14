@@ -25,7 +25,7 @@ Overall, it's a fun and interactive program that combines two different games an
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/mFRm0Zg/Screenshot-20230914-055640.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/tx2kfgc/Screenshot-20230914-055714.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/3CBLWfb/Screenshot-20230914-055726.png">
-<iframe src="https://youtu.be/R3cQruUiRLE?si=se7_C4VbwRNqfOhG" width="100%" height="960" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://www.youtube.com/watch?v=R3cQruUiRLE" width="100%" height="960" "></iframe>
 
 ### I hope you will enjoy my small piece of code. @ohm_kumar
 ### =}> [Youtube](https://www.youtube.com/@ohms_code)
