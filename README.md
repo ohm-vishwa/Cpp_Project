@@ -26,8 +26,7 @@ Overall, it's a fun and interactive program that combines two different games an
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/tx2kfgc/Screenshot-20230914-055714.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/3CBLWfb/Screenshot-20230914-055726.png">
 <video autoplay loop style="width:100%; height: auto; position:absolute; z-index: -1;">
-  <source src="http://syddev.com/jquery.videoBG/assets/tunnel_animation.mp4" type="video/mp4" />
-  <source src="http://syddev.com/jquery.videoBG/assets/tunnel_animation.ogv" type="application/ogg" />
+  <source src="https://youtu.be/R3cQruUiRLE?si=se7_C4VbwRNqfOhG" type="video/mp4" />
   <img src="http://syddev.com/jquery.videoBG/assets/tunnel_animation.jpg">
 </video>
 
