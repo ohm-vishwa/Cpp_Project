@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include <windows.h>
+
 #define frame_delay 60
 #define num_iterations 10 
 
@@ -89,6 +90,8 @@ int main(){
         return 0;
     }
     game1_obj.thanks();
+
+    cin.ignore();
     return 0;
 }
 
@@ -446,8 +449,7 @@ void Game_swg :: thanks(){
     print_style_1(user_name);
     set_color(14);
     print_style_1(" for playing.");
-    set_color(7);
-    Sleep(5000);   
+    set_color(7);  
 }
 void Game_swg :: your_score(){
     set_color(11);
@@ -468,6 +470,7 @@ void Game_swg :: ask(){
     getline(cin,ask);
     if(ask[0] == 'y' || ask[0] == 'Y'){
         counter = 5;
+        score = 0;
     }
     cout << endl;
 }
