@@ -1,9 +1,9 @@
-This is a mini project (c++) based on `Snake-Water-Gun` Game similar to the `Rock-Paper-Scissor` Game.
+This is a mini project (c++) based on `Snake-Water-Gun` Game similar to the `Rock-Paper-Scissor` and another one is `Guess the Number` Game both are in same program.
 
 The idea behind this game is any way of the <sup>3</sup>P<sub>2</sub> (both are distinct) object selected by `user` && `program` gives result, either one of them will be the `winner` by some logic
 or, in case of <sup>3</sup>P<sub>1</sub> (when both are identical) match is `drawn.`
  and another game idea is to guess the random number selected by the `program.`
- 
+ <br>
 
 **Game_swg Class:** This class represents the _Snake-Water-Gun game_. It includes methods for various aspects of the game, such as the _welcome animation_, _setting player names_, _playing rules_, _run game_, and _handling user input_.
 
