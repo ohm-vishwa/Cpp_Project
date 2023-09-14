@@ -20,11 +20,11 @@ Overall, it's a fun and interactive program that combines two different games an
 
 ### =}> [Github: source code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
 
-<img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/zs9qcqX/Screenshot-20230911-083741.png">
-<img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/XDT0573/Screenshot-20230911-070557.png">
-<img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/JvHHVXB/Screenshot-20230911-084159.png">
-<img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/K6kd5k1/Screenshot-20230911-084411.png">
-<img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/1Km2kRt/Screenshot-20230911-084422.png">
+
+<img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/KXCYJsL/Screenshot-20230914-055433.png">
+<img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/mFRm0Zg/Screenshot-20230914-055640.png">
+<img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/tx2kfgc/Screenshot-20230914-055714.png">
+<img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/3CBLWfb/Screenshot-20230914-055726.png">
 
 ### I hope you will enjoy my small piece of code. @ohm_kumar
 ### =}> [Youtube](https://www.youtube.com/@ohms_code)
