@@ -1,8 +1,9 @@
 This is a mini project (c++) based on `Snake-Water-Gun` Game similar to the `Rock-Paper-Scissor` Game.
 
-The idea behind this game is any way of the <sup>3</sup>P<sub>2</sub> (distinct) objects selected by `user` && `program` gives result, either one of them will be the `winner` by some logic
+The idea behind this game is any way of the <sup>3</sup>P<sub>2</sub> (both are distinct) object selected by `user` && `program` gives result, either one of them will be the `winner` by some logic
 or, in case of <sup>3</sup>P<sub>1</sub> (when both are identical) match is `drawn.`
- and another game idea is to guess the random number choosen by the `program.`
+ and another game idea is to guess the random number selected by the `program.`
+ 
 
 **Game_swg Class:** This class represents the _Snake-Water-Gun game_. It includes methods for various aspects of the game, such as the _welcome animation_, _setting player names_, _playing rules_, _run game_, and _handling user input_.
 
@@ -17,6 +18,7 @@ or, in case of <sup>3</sup>P<sub>1</sub> (when both are identical) match is `dra
 Overall, it's a fun and interactive program that combines two different games and _includes colorful animations_ and text. However, it's worth noting that it relies on _Windows-specific features_ and may not work on non-Windows systems. since, it uses a console-based interface, it's best run in a `command prompt or terminal`.
 
 ### =}> [Github: source code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
+
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/zs9qcqX/Screenshot-20230911-083741.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/XDT0573/Screenshot-20230911-070557.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/JvHHVXB/Screenshot-20230911-084159.png">
