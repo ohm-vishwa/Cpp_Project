@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 #include <windows.h>
-
 #define frame_delay 60
 #define num_iterations 10 
 
@@ -86,13 +85,13 @@ int main(){
         game2_obj.run_guess_game();
     }
     else{
-        game1_obj.thanks();
+        game2_obj.thanks();
         return 0;
     }
-    game1_obj.thanks();
+    game2_obj.thanks();
 
     cin.ignore();
-    return 0;
+    return 1513;    
 }
 
 
@@ -104,6 +103,7 @@ void Game_guess :: pc_name_call(){
     print_style_1("/> ");
     set_color(14);
 }
+
 void Game_guess :: user_name_call(){
     set_color(11);
     print_style_1("\n@");
@@ -111,6 +111,7 @@ void Game_guess :: user_name_call(){
     print_style_1("/> ");
     set_color(14);
 }
+
 void Game_guess :: run_guess_game(){
     pc_name_call();
     set_color(14);
@@ -257,6 +258,7 @@ void Game_swg :: greet(){
     cout <<  endl <<  endl;
     Sleep(500);
 }
+
 void Game_swg :: rules(){
     set_color(4);
     print_style_1("\n<{-----{RULES OF THE GAME}-----}>\n\n");
@@ -276,6 +278,7 @@ void Game_swg :: rules(){
     system("pause");
 
 }
+
 void Game_swg :: welcome_animation(){
     set_color(5);
     print_style_2("\n\n\t\t\t********************************************************************************\n");
@@ -310,6 +313,7 @@ void Game_swg :: welcome_animation(){
     set_color(5);
     print_style_2(" [GAME] **************************\n\n");
 }
+
 void Game_swg :: show_remaing_time(){
     set_color(8);
     if (counter == 5){
@@ -326,6 +330,7 @@ void Game_swg :: show_remaing_time(){
         print_style_1(" trun");
     }
 }
+
 void Game_swg :: get_Game_swg_input(){
     set_color(9);
     print_style_1("\nPress:");
@@ -352,6 +357,7 @@ void Game_swg :: get_Game_swg_input(){
     fflush(stdin);   
 
 }
+
 void Game_swg :: game_body(string A , string B, string C, int color){
     set_color(11);
     print_style_1(user_name);
@@ -393,6 +399,7 @@ void Game_swg :: game_body(string A , string B, string C, int color){
         cout << endl;
     }
 }
+
 void Game_swg :: run_game(){
     computer = (rand())%3 + 1;
 
@@ -400,44 +407,44 @@ void Game_swg :: run_game(){
     get_Game_swg_input();
 
     set_color(11); 
-    if(user != 1 || user != 2 || user != 3){
-        if(computer == 1 && user == 2){
-            game_body(" WATER ", " SNAKE ", computer_name, 192);         // user lose
-        }
-        else if(computer == 2 && user == 3){
-            game_body(" GUN ", " WATER ", computer_name,  192);           // user lose    
-        }
-        else if(computer == 3 && user == 1){
-            game_body(" SNAKE ", " GUN ", computer_name, 192);            // user lose                 
-        }
-        else if(computer == 1 && user == 3){
-            game_body(" GUN ", " SNAKE ", user_name, 160);              // user win      
-            score++;
-        }
-        else if(computer == 2 && user == 1){
-            game_body(" SNAKE ", " WATER ", user_name, 160);            // user win      
-            score++;
-        }
-        else if(computer == 3 && user == 2){
-            game_body(" WATER ", " GUN ", user_name, 160);              // user win          
-            score++;
-        }
-        else if(computer == 1 &&  user == 1){
-            game_body(" SNAKE ", " SNAKE ", " ", 224);             // match drawn
-        }
-        else if(computer == 2 && user == 2){
-            game_body(" WATER ",  " WATER ", " ", 224);             // match drawn
-        }
-        else if(computer == 3 && user == 3){
-            game_body(" GUN ", " GUN ", " ", 224);                  // match drawn
-        }
-        else{
-            set_color(4);
-            print_style_1("Invalid input");             // invalid input
-            underline();
-        }
+    if(computer == 1 && user == 2){
+        game_body(" WATER ", " SNAKE ", computer_name, 192);         // user lose
     }
+    else if(computer == 2 && user == 3){
+        game_body(" GUN ", " WATER ", computer_name,  192);           // user lose    
+    }
+    else if(computer == 3 && user == 1){
+        game_body(" SNAKE ", " GUN ", computer_name, 192);            // user lose                 
+    }
+    else if(computer == 1 && user == 3){
+        game_body(" GUN ", " SNAKE ", user_name, 160);              // user win      
+        score++;
+    }
+    else if(computer == 2 && user == 1){
+        game_body(" SNAKE ", " WATER ", user_name, 160);            // user win      
+        score++;
+    }
+    else if(computer == 3 && user == 2){
+        game_body(" WATER ", " GUN ", user_name, 160);              // user win          
+        score++;
+    }
+    else if(computer == 1 &&  user == 1){
+        game_body(" SNAKE ", " SNAKE ", " ", 224);             // match drawn
+    }
+    else if(computer == 2 && user == 2){
+        game_body(" WATER ",  " WATER ", " ", 224);             // match drawn
+    }
+    else if(computer == 3 && user == 3){
+        game_body(" GUN ", " GUN ", " ", 224);                  // match drawn
+    }
+    else{
+        set_color(4);
+        print_style_1("Invalid input");             // invalid input
+        underline();
+    }
+    
 }
+
 void Game_swg :: thanks(){
     set_color(10);
     print_style_1("\n\n@ohm_vishwa/> ");
@@ -451,6 +458,7 @@ void Game_swg :: thanks(){
     print_style_1(" for playing.");
     set_color(7);  
 }
+
 void Game_swg :: your_score(){
     set_color(11);
     print_style_1("your score is ");
@@ -458,6 +466,7 @@ void Game_swg :: your_score(){
     print_style_1(" out of 5");
     underline();
 }
+
 void Game_swg :: ask(){
     cout << endl;
     set_color(11);
@@ -481,6 +490,7 @@ void print_style_1(string printinloop){
         Sleep(12);
     }
 }
+
 void print_style_2(string printinloop){
     for(int i = 0 ; printinloop[i] != '\0' ; i++){
         cout <<  printinloop[i];
@@ -489,9 +499,11 @@ void print_style_2(string printinloop){
         }
     }
 }
+
 void set_color(int color){
     SetConsoleTextAttribute(h,color);
 }
+
 void loading_animation(){
      char spinner[] = { '|', '/', '-', '\\' };
 
@@ -513,6 +525,7 @@ void loading_animation(){
     system("cls"); 
     Sleep(1000);
 }
+
 void underline(){
     set_color(5);
     cout << endl;
