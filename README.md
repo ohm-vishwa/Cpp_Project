@@ -1,4 +1,4 @@
-Hello I'm OM, a student of Dav Institute of Engineering & Technology Palamu. 
+Hello I'm Om, a student of DAV Institute of Engineering & Technology Palamu. 
 
 Branch : CSE ( 2<sup>nd</sup> Year )
 
@@ -22,7 +22,7 @@ or, in case of <sup>3</sup>P<sub>1</sub> (when both are identical) match is `dra
 
 Overall, it's a fun and interactive program that combines two different games and _includes colorful animations_ and text. However, it's worth noting that it relies on _Windows-specific features_ and may not work on non-Windows systems. since, it uses a console-based interface, it's best run in a `command prompt or terminal`.
 
-### =}> [Github: source code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
+### ===}> [Github: source code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
 
 
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/KXCYJsL/Screenshot-20230914-055433.png">
@@ -31,4 +31,4 @@ Overall, it's a fun and interactive program that combines two different games an
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/3CBLWfb/Screenshot-20230914-055726.png">
 
 ### I hope you will enjoy my small piece of code. @ohm_kumar
-### =}> [Youtube](https://www.youtube.com/watch?v=R3cQruUiRLE&t=1s)
+### ===}> [Youtube](https://www.youtube.com/watch?v=R3cQruUiRLE&t=1s)
