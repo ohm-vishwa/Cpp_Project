@@ -27,10 +27,10 @@ Overall, it's a fun and interactive program that combines two different games an
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/tx2kfgc/Screenshot-20230914-055714.png">
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/3CBLWfb/Screenshot-20230914-055726.png">
 
-### Github : <span style="color: orange">[source code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)</span>  
+### Github : <span style="color: blue">[source code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)</span> 
 
-### Gmail : <span style="color: orange">ohmdto1513@gmail.com</span>
+### Gmail : <span style="color: blue">ohmdto1513@gmail.com</span>
 
-### ===}> <span style="color: orange">[Youtube](https://www.youtube.com/watch?v=R3cQruUiRLE&t=1s)</span>
+### ===}> <span style="color: blue">[Youtube](https://www.youtube.com/watch?v=R3cQruUiRLE&t=1s)</span>
 
-### I hope you will enjoy my small piece of code. @ohm_kumar 
+### I hope you will enjoy my small piece of code. <span style="color: yellow">@ohm_kumar</span> 
