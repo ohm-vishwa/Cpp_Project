@@ -29,6 +29,9 @@ Overall, it's a fun and interactive program that combines two different games an
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/mFRm0Zg/Screenshot-20230914-055640.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/tx2kfgc/Screenshot-20230914-055714.png">
 <img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/3CBLWfb/Screenshot-20230914-055726.png">
+
 Gmail : <span style="color: green">ohmdto1513@gmail.com</span>
+
 ### ===}> [Youtube](https://www.youtube.com/watch?v=R3cQruUiRLE&t=1s)
-- ### I hope you will enjoy my small piece of code. @ohm_kumar 
+
+### I hope you will enjoy my small piece of code. @ohm_kumar 
