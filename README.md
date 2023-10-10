@@ -22,13 +22,12 @@ or, in case of <sup>3</sup>P<sub>1</sub> (when both are identical) match is `dra
 
 Overall, it's a fun and interactive program that combines two different games and _includes colourful animations_ and text. However, it's worth noting that it relies on _Windows-specific features_ and may not work on non-Windows systems. since it uses a console-based interface, it's best to run in a `command prompt or terminal`.
 
+<img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/KXCYJsL/Screenshot-20230914-055433.png">
+<img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/mFRm0Zg/Screenshot-20230914-055640.png">
+<img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/tx2kfgc/Screenshot-20230914-055714.png">
+<img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/3CBLWfb/Screenshot-20230914-055726.png">
+
 ### ===}> [Github: source code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
-
-
-<img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/KXCYJsL/Screenshot-20230914-055433.png">
-<img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/mFRm0Zg/Screenshot-20230914-055640.png">
-<img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/tx2kfgc/Screenshot-20230914-055714.png">
-<img width="960" alt="Screenshot_20230525_120044" src="https://i.ibb.co/3CBLWfb/Screenshot-20230914-055726.png">
 
 ### Gmail : <span style="color: green">ohmdto1513@gmail.com</span>
 
