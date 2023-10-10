@@ -33,4 +33,4 @@ Overall, it's a fun and interactive program that combines two different games an
 
 ### Gmail : <span style="color: default">ohmdto1513@gmail.com</span>
 
-I hope you will enjoy my small piece of code. <span style="color: orange">@ohm_kumar</span> 
+I hope you will enjoy my small piece of code.
