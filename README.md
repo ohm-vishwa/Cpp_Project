@@ -10,7 +10,7 @@ or, in case of <sup>3</sup>P<sub>1</sub> (when both are identical) match is `dra
 
  ---
  
-**Game_swg Class:** This class represents the _Snake-Water-Gun game_. It includes methods for various aspects of the game, such as the _welcome animation_, _setting player names_, _playing rules_, _running game_, and _handling user input_.
+**Game_swg Class:** This class represents the _Snake-Water-Gun game_. It includes methods for various aspects of the game, such as the _welcome animation_, _setting players name_, _playing rules_, _running game_, and _handling user input_.
 
 **Game_guess Class:** It includes methods for `generating a random number`, allowing the user to `guess the number`.
 
@@ -20,7 +20,7 @@ or, in case of <sup>3</sup>P<sub>1</sub> (when both are identical) match is `dra
 
 **Windows-Specific Functions:** The program uses the `Windows API (windows.h)` to manipulate `console text colours`. This program is *designed* to run on `Windows systems`.
 
-Overall, it's a fun and interactive program that combines two different games and _includes colourful animations_ and text. However, it's worth noting that it relies on _Windows-specific features_ and may not work on non-Windows systems. since it uses a console-based interface, it's best to run in a `command prompt or terminal`.
+Overall, it's a fun and interactive program that combines two different games and _includes colourful animations_ and text. However, it's worth nothing that it relies on _Windows-specific features_ and may not work on non-Windows systems. since it uses a console-based interface, it's best to run in a `command prompt or terminal`.
 
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/KXCYJsL/Screenshot-20230914-055433.png">
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/mFRm0Zg/Screenshot-20230914-055640.png">
