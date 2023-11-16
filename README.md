@@ -1,4 +1,4 @@
-Hello, I'm Om, a student of DAV Institute of Engineering & Technology Palamu. 
+Hello, I'm Om, student of DAV Institute of Engineering & Technology Palamu. 
 
 Branch : CSE ( 3<sup>rd</sup> Year )
 
