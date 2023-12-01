@@ -26,9 +26,8 @@ Overall, it's a fun and interactive program that combines two different games an
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/mFRm0Zg/Screenshot-20230914-055640.png">
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/tx2kfgc/Screenshot-20230914-055714.png">
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/3CBLWfb/Screenshot-20230914-055726.png">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AeFy5kA-l08?si=vQrBvDuUfrXTZ4w1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### ===}> [Preview](https://www.youtube.com/watch?v=R3cQruUiRLE&t=1s)
+### ===}> [Preview](https://www.youtube.com/watch?v=AeFy5kA-l08&list=PLH6K1UBL_JFwQ9JlwMYBKerva9yiNDRHI&index=1)
 
 ### Github : [source code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
 
