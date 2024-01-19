@@ -1,4 +1,4 @@
-Hello, I'm Om, student of DAV Institute of Engineering & Technology Palamu. 
+Hello, I'm Om, a student of DAV Institute of Engineering & Technology Palamu. 
 
 Branch : CSE ( 3<sup>rd</sup> Year )
 
@@ -10,24 +10,24 @@ or, in case of <sup>3</sup>P<sub>1</sub> (when both are identical) match is `dra
 
  ---
  
-**Game_swg Class:** This class represents the _Snake-Water-Gun game_. It includes methods for various aspects of the game, such as the _welcome animation_, _setting players name_, _playing rules_, _running game_, and _handling user input_.
+**Game_swg Class:** This class represents the _Snake-Water-Gun game_. It includes methods for various aspects of the game, such as the _welcome animation_, _setting players' names_, _playing rules_, _running the game_, and _handling user input_.
 
 **Game_guess Class:** It includes methods for `generating a random number`, allowing the user to `guess the number`.
 
 **Main Function:** The primary function _initializes and runs the Snake-Water-Gun game_, and then it asks the user if they want to play again._ runs the guess number game function until the *user guesses the correct number*.
 
-**Helper Functions:** There are several helper functions for `setting text colour`, `loading animations`, and `printing string with various styles`.
+**Helper Functions:** There are several helper functions for `setting text color`, `loading animations`, and `printing string with various styles`.
 
-**Windows-Specific Functions:** The program uses the `Windows API (windows.h)` to manipulate `console text colours`. This program is *designed* to run on `Windows systems`.
+**Windows-Specific Functions:** The program uses the `Windows API (windows.h)` to manipulate `console text colors`. This program is *designed* to run on `Windows systems`.
 
-Overall, it's a fun and interactive program that combines two different games and _includes colourful animations_ and text. However, it's worth nothing that it relies on _Windows-specific features_ and may not work on non-Windows systems. since it uses a console-based interface, it's best to run in a `command prompt or terminal`.
+Overall, it's a fun and interactive program that combines two different games and _includes colorful animations_ and text. However, it's worth nothing that it relies on _Windows-specific features_ and may not work on non-Windows systems. since it uses a console-based interface, it's best to run in a `command prompt or terminal`.
 
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/KXCYJsL/Screenshot-20230914-055433.png">
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/mFRm0Zg/Screenshot-20230914-055640.png">
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/tx2kfgc/Screenshot-20230914-055714.png">
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/3CBLWfb/Screenshot-20230914-055726.png">
 
-### ===}> [Preview](https://www.youtube.com/watch?v=AeFy5kA-l08&list=PLH6K1UBL_JFwQ9JlwMYBKerva9yiNDRHI&index=1)
+### ===}> [Preview](https://youtu.be/jxXF5hLYwT8)
 
 ### Github : [source code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
 
