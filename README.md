@@ -21,6 +21,7 @@ or, in case of <sup>3</sup>P<sub>1</sub> (when both are identical) match is `dra
 **Windows-Specific Functions:** The program uses the `Windows API (windows.h)` to manipulate `console text colors`. This program is *designed* to run on `Windows systems`.
 
 Overall, it's a fun and interactive program that combines two different games and _includes colorful animations_ and text. However, it's worth nothing that it relies on _Windows-specific features_ and may not work on non-Windows systems. since it uses a console-based interface, it's best to run in a `command prompt or terminal`.
+
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/KXCYJsL/Screenshot-20230914-055433.png">
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/mFRm0Zg/Screenshot-20230914-055640.png">
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/tx2kfgc/Screenshot-20230914-055714.png">
