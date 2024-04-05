@@ -98,7 +98,7 @@ int main(){
 /* <-------------------------------------------------------------->*/
 void Game_guess :: pc_name_call(){
     set_color(10);
-    print_style_1("\n@");
+    cout << endl;
     print_style_1(computer_name);
     print_style_1("/> ");
     set_color(14);
@@ -106,7 +106,7 @@ void Game_guess :: pc_name_call(){
 
 void Game_guess :: user_name_call(){
     set_color(11);
-    print_style_1("\n@");
+    cout << endl;
     print_style_1(user_name);
     print_style_1("/> ");
     set_color(14);
@@ -124,7 +124,7 @@ void Game_guess :: run_guess_game(){
             pc_name_call();
             print_style_1("[Hint] ===> ");
             set_color(160);
-            print_style_1(" Use \"Divide & Conquer\" Method ");
+            print_style_1(" Use \"Binary Search\" Method ");
             set_color(7);
             cout <<  endl;
         }
