@@ -1,4 +1,4 @@
-Hello, I'm Om, a student of DAV Institute of Engineering & Technology Palamu. 
+Hello, I'm Om, student of DAV Institute of Engineering & Technology Palamu. 
 
 Branch : CSE ( 3<sup>rd</sup> Year )
 
@@ -35,7 +35,7 @@ Overall, it's a fun and interactive program that combines two different games an
 
 ### ===}> [Facebook](https://m.facebook.com/people/Ohm-Kumar/100045077317943/)
 
-### ===}> [Linkedin](https://github.com/ohmDTO/project)
+### ===}> [Linkedin](https://www.linkedin.com/in/om-kumar01/)
 
 ### Gmail : <span style="color: default">ohmdto1513@gmail.com</span> 
 
