@@ -22,12 +22,14 @@ or, in case of <sup>3</sup>P<sub>1</sub> (when both are identical) match is `dra
 
 Overall, it's a fun and interactive program that combines two different games and _includes colorful animations_ and text. However, it's worth nothing that it relies on _Windows-specific features_ and may not work on non-Windows systems. since it uses a console-based interface, it's best to run in a `command prompt or terminal`.
 
+# Preview
+https://github.com/ohm-vishwa/Cpp_Project/assets/113088687/3bbc5828-b6d5-410a-b7cf-52700d2f0444
+
+# Snapshots
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/KXCYJsL/Screenshot-20230914-055433.png">
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/mFRm0Zg/Screenshot-20230914-055640.png">
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/tx2kfgc/Screenshot-20230914-055714.png">
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/3CBLWfb/Screenshot-20230914-055726.png">
-
-https://github.com/ohm-vishwa/Cpp_Project/assets/113088687/3873f3d0-afb3-412d-93d9-1ca2f14c6cf5
 
 ### Github : [Source Code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
 
