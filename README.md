@@ -27,9 +27,9 @@ Overall, it's a fun and interactive program that combines two different games an
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/tx2kfgc/Screenshot-20230914-055714.png">
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/3CBLWfb/Screenshot-20230914-055726.png">
 
-### Github : [Source Code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
+https://github.com/ohm-vishwa/Cpp_Project/assets/113088687/3873f3d0-afb3-412d-93d9-1ca2f14c6cf5
 
-### ===}> [Preview](https://youtu.be/jxXF5hLYwT8)
+### Github : [Source Code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
 
 ### ===}> [Instagram](https://www.instagram.com/ohm_vishwa/)
 
@@ -40,3 +40,5 @@ Overall, it's a fun and interactive program that combines two different games an
 ### Gmail : <span style="color: default">ohmdto1513@gmail.com</span> 
 
 I hope you will enjoy my small piece of code 🧡
+
+
