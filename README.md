@@ -23,6 +23,8 @@ or, in case of <sup>3</sup>P<sub>1</sub> (when both are identical) match is `dra
 Overall, it's a fun and interactive program that combines two different games and _includes colorful animations_ and text. However, it's worth nothing that it relies on _Windows-specific features_ and may not work on non-Windows systems. since it uses a console-based interface, it's best to run in a `command prompt or terminal`.
 
 # Preview
+[![Watch the video](https://i.sstatic.net/Vp2cE.png)](https://youtu.be/jxXF5hLYwT8?si=JABZclzbA5nZMxnT)
+
 https://github.com/ohm-vishwa/Cpp_Project/assets/113088687/3bbc5828-b6d5-410a-b7cf-52700d2f0444
 
 # Snapshots
