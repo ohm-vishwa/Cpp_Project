@@ -31,7 +31,7 @@ https://github.com/ohm-vishwa/Cpp_Project/assets/113088687/3bbc5828-b6d5-410a-b7
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/tx2kfgc/Screenshot-20230914-055714.png">
 <img width="1200" alt="Screenshot_20230525_120044" src="https://i.ibb.co/3CBLWfb/Screenshot-20230914-055726.png">
 
-### Github : [Source Code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
+### ===}> [Source Code](https://github.com/ohmDTO/project/blob/main/Snake_Water_Gun.cpp)
 
 ### ===}> [Instagram](https://www.instagram.com/ohm_vishwa/)
 
