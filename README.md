@@ -573,6 +573,8 @@ void underline(){
 
 ### ===}> [Instagram](https://www.instagram.com/ohm_vishwa/)
 
+### ===}> [Youtube](https://youtube.com/shorts/y9fPZuudhfE?si=p2TdNCA36sBYTLCW)
+
 ### ===}> [Facebook](https://m.facebook.com/people/Ohm-Kumar/100045077317943/)
 
 ### ===}> [Linkedin](https://www.linkedin.com/in/om-kumar01/)
