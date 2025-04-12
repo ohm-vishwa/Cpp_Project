@@ -1,6 +1,6 @@
 Hello, I'm Om, student of DAV Institute of Engineering & Technology Palamu. 
 
-Branch : CSE ( 3<sup>rd</sup> Year )
+Branch : CSE ( 4<sup>th</sup> Year )
 
 This is a mini project (c++) based on a `Snake-Water-Gun` Game similar to the `Rock-Paper-Scissor` and another one is the `Guess the Number` Game both are in the same program.
 
