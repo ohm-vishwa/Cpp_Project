@@ -1,7 +1,3 @@
-Hello, I'm Om, student of DAV Institute of Engineering & Technology Palamu. 
-
-Branch : CSE ( 4<sup>th</sup> Year )
-
 This is a mini project (c++) based on a `Snake-Water-Gun` Game similar to the `Rock-Paper-Scissor` and another one is the `Guess the Number` Game both are in the same program.
 
 The idea behind this game is any way of the <sup>3</sup>P<sub>2</sub> (distinct) object selected by `user` && `program` gives a result, either one of them will be the `winner` by some logic
